@@ -1,0 +1,27 @@
+.container{
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  border: 1px solid black;
+
+  display: grid;
+  /*  grid-template로 아이템처럼 크기조정이가능하지 않나 */
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+/* 세로 기준 배열*/
+  align-content: center;
+  /* 가로 기준 배열 */
+  justify-content: space-between;
+
+  justify-items:center;
+  align-items: center;
+}
+
+.container>div{
+  border: 1px solid red;
+}
+
+.container>div:last-child{
+  align-self: stretch;
+  justify-self: stretch;
+}

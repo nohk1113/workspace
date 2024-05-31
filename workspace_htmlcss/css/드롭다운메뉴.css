@@ -1,0 +1,54 @@
+.container{
+  width: 500px;
+  margin: 50px auto;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu>li{
+  width: 150px;
+  text-align: center;
+  /* 상하, 좌우  안쪽 여백 그래서 글자가 가운데로 옴 */
+padding: 12px 0px;
+background-color: black;
+position: relative;
+}
+
+.menu>li::after{
+content: "|";
+color: white;
+position: absolute;
+right: 0px;
+}
+
+.menu>li:last-child::after{
+  content: none;
+}
+
+
+.menu a{
+  color: white;
+  text-decoration: none;
+}
+.sub-menu{
+  position: absolute;
+  top:43px;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+ /* display: none; */
+  transition: all 1s;
+  max-height: 0px;
+}
+.sub-menu>li{
+  margin: 8px 0px;
+}
+.sub-menu>li:hover{
+  font-weight: 600;
+}
+.menu> li:hover .sub-menu{
+/* display: block; */
+max-height: 200px;
+}

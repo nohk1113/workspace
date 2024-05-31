@@ -1,0 +1,12 @@
+package 출력문;
+
+public class Exam2 {
+    public static void main(String[] args){
+        // 소괄호 안의 내용을 콘솔에 출력 + 한줄 개행
+        System.out.println("hello~");
+        System.out.println("hello~");
+        // print 는 한줄개행 안함
+        System.out.print("java");
+        System.out.print("java");
+    }
+}

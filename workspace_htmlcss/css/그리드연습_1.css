@@ -1,0 +1,31 @@
+body{
+  background-color: rgb(49, 49, 49);
+}
+.container{
+  margin: 30px auto;
+  background-color: white;
+border: 1px solid black;
+width: 850px;
+height: 800px;
+}
+.fist{
+  text-align: center;
+}
+
+.total_img{
+width: 850px;
+height: 800px;
+  display: grid;
+  grid-template-columns: repeat(4,155px);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+}
+img{
+  width: 155px;
+}
+
+.total_img>div:hover{
+
+}

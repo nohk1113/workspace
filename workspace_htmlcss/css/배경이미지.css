@@ -1,0 +1,19 @@
+body{
+  margin: 0px;
+}
+h3{
+  padding: 0px;
+  margin: 0px;
+}
+.content{
+  /* 이미지 넣는 법 */
+  background-image: url(배경.jpg);
+  background-repeat: no-repeat;
+  /* cover: 영역에 여백없이 꽉채움
+  이미지의 비율은 유지 */
+  background-size: cover;
+  /* 이미지의 가로 */
+  width: 100vw;
+/* 이미지의 세로 */
+  height: 90vh;
+}

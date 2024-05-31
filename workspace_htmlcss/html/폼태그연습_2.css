@@ -1,0 +1,36 @@
+.gh{ font-size: 14px;
+}
+.g2{
+  text-align: center;
+  background-color: aqua;
+}
+.g3{
+  text-align: center;
+  background-color: aqua;
+}
+.gg{
+  margin: 16px;
+  text-align: center;
+}
+td{
+/* 패딩으로 글자간격 늘리기 */
+  padding: 6px;
+}
+.aa{
+  font-weight: bold;
+}
+.span{
+  color: red;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.tr span{
+  font-weight: bold;
+}
+tr > td> span> span{
+  color: brown;
+}
+table> tbody > tr> td;
+.red-font{
+  color: red;
+}

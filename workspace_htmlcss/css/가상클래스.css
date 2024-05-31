@@ -1,0 +1,71 @@
+/* 글자에 애니메이션 넣기 */
+/* 마우스 커서를 올렸을 때 변화시키는 것은 주로 CSS의 hover 가상 클래스를 사용하여 구현합니다. */
+/* ctrl + E 누르면 파일찾기 가능 */
+.container{
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin: 30px;
+}
+.container>div{
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  border: 1px solid black;
+  color: aliceblue;
+  font-size: 2rem;
+  /* 블록 안의 글을 가운데로 옮기는 방법 */
+display: flex;
+justify-content: center;
+align-items: center;
+/* 변환: 전체 1초동안 /// 1초동안 커짐*/
+transition: all 1s;
+}
+/* hover: 선택자에 마우스를 올리면 발생 */
+.d1:hover{
+width: 120px;
+height: 120px;
+}
+.d2:hover{
+background-color: black;
+color: yellow;
+}
+.d3:hover{
+  position: relative;
+  top:10px;
+  left: 10px;
+}
+/* ...................... */
+input{
+  margin-left: 30px;
+  width: 200px;
+/* 상하, 좌우 */
+  padding: 10px 4px;
+  border-radius: 7px;
+  border: 1px solid lightblue;
+  outline: none;
+  transition: all 1s;
+}
+/* input, button을 클릭하면 발생 */
+input:focus{
+  width: 300px;
+  border: 1.5px solid green;
+}
+/* ...................... */
+ul{
+  margin-left: 30px;
+
+}
+/* before :선택자 앞에 인라인 요소 추가 */
+.li-1::before{
+  content: "new";
+  color: white;
+  background-color: blue;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin-right: 6px;
+}
+/* after: 선택자 뒤에 인라인 요소 추가 */
+.li-1::after{
+  content: "css";
+}

@@ -1,0 +1,49 @@
+body{
+  margin: 0px;
+
+}
+div{
+  /* border: 1px solid black; */
+}
+ul> li{
+  display: inline-block;
+  font-size: 11px;
+  margin: 0px;
+}
+.nn{
+text-align: center;
+padding: 12px;
+}
+.yy{
+  font-size: 12px;
+  float: inline-end;
+  display: inline-block;
+
+}
+li{
+  display: inline-block;
+}
+ul{
+  display: inline;
+}
+
+ul > li{
+  text-align: center;
+  width: 70px;
+  font-weight: bold;
+
+}
+.qq{
+  background-image: url(화면구현_메인배경.PNG);
+  height: 873px;
+}
+.hh{
+  background-color: black ;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
+}
+.kk{
+  margin: 0px;
+
+}

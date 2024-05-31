@@ -1,0 +1,21 @@
+.d1{
+  margin: auto;
+  width: 300px;
+}
+table, tr, td{
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 16px;
+  width: 200px;
+}
+table{
+  border-collapse: collapse;
+}
+button{
+  margin-top: 10px;
+  width: 100px;
+
+}
+div{
+  text-align: center;
+}

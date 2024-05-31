@@ -1,0 +1,14 @@
+ul{
+  list-style-type: none;
+
+}
+ul > li{
+  /* 라인 색 */
+  border: 1px solid black;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+body{
+  background-image: url();
+}

@@ -1,0 +1,106 @@
+.container{
+  width: 800px;
+  box-shadow:  0px 0px 6px rgb(151, 151, 151);
+  padding: 24px 16px;
+  border-radius: 10px;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.content>div{
+  margin: 10px;
+}
+
+.content{
+display: flex;
+align-items: center;
+height: 200px;
+justify-content: space-around;
+}
+input[type="text"], input[type="password"]{
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  width: 100%;
+  padding: 4px 4px;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 4px;
+  /* 버튼 의 바깥색 없애기 */
+  outline: none;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+border: 2px solid goldenrod;
+}
+
+.login-form{
+  width: 50%;
+  background-color: #eeeeee;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgb(145, 145, 145);
+}
+.intro{
+  width: 45%;
+}
+label{
+  font-weight: bold;
+  font-size: 0.8rem;
+
+}
+.btn-div{
+  margin-top: 10px;
+}
+button{
+  color: white;
+  background-color: rgb(0, 190, 190);
+  /* outline: none; */
+  border: none;
+  width: 90px;
+  /* 상하, 좌우 */
+  padding: 4px 0px;
+  border-radius: 4px;
+}
+
+button:hover{
+  color: rgb(236, 226, 226);
+  background-color: rgb(8, 163, 163);
+  /* 버튼 위에 마우스를 올리면 손가락으로 바뀜 */
+  cursor: pointer;
+}
+.intro>h4{
+  margin-bottom: 7px;
+}
+.intro li{
+  font-size: 0.8rem;
+  margin-bottom: 3.5px;
+}
+.intro a{
+  display: block;
+  background-color: rgb(255, 207, 144);
+  /* 밑줄 업애기 */
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  /* 상하, 좌우 */
+  padding: 3.5px 0px;
+}
+p{
+  color: rgb(122, 223, 122);
+  text-align: center;
+  font-size: 0.75rem;
+  /* 상하, 좌우 */
+  margin: 6px 0px;
+}
+span>i{
+  color: rgb(0, 255, 76);
+}
+input[type="checkbox"]{
+  position: relative;
+  top: 1.5px;
+}

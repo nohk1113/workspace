@@ -1,0 +1,85 @@
+body{
+  display: flex;
+  /* 태그 자체를 움직일수가 있음 */
+  justify-content: center;
+  align-items: center;
+  /*  세로로 정 가운데로 위치하기 단위(vh) */
+  height: 100vh;
+}
+.container{
+  width: 800px;
+  height: 300px;
+  /* border-radius 는 가장자리를 둥글게 만들어준다 */
+  border-radius: 10px;
+  /* 첫번째 : x축으로의 그림자 이동 
+    두번째 : y축으로 그림자 이동
+    세번째 : 그림자의 퍼짐 정도
+    네번째 : 그림자의 색*/
+  box-shadow: 0px 0px 5px lightslategray;
+}
+.line{
+  width: 750px;
+  color: lightslategray;
+}
+.container>div:nth-child(1){
+  font-size: 23px;
+  font-weight: bold;
+  padding: 1.5%;
+  margin-top: 10px;
+}
+.box{
+  padding: 10px;
+  background-color:#F1F1F1;
+  width: 50%;
+  border-radius: 12px;
+/* display: inline-block */
+margin: 0px 3px 3px 3px;
+box-shadow: 0px 0px 2px rgb(182, 182, 182);
+}
+.gg{
+  /* display: inline-block; */
+}
+.by{
+color: rgb(117, 189, 9);
+font-size: 12px;
+text-align: center;
+}
+.mama{
+  background-color: rgb(255, 187, 0);
+  color: white;
+  border-radius: 5px;
+padding: 10px;
+width: 350px;
+border: 0px;
+}
+.gaga{
+  width: 350px;
+  color: gray;
+  margin-top: 10px;
+  height: 20px;
+}
+li{
+  list-style: none;
+  text-align: left;
+}
+.rr{
+  display: flex;
+margin: 0px 0px 10px 10px;
+}
+.jj{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.button1{
+  margin-top: 15px;
+  color: aliceblue; 
+  background-color: rgb(83, 83, 255);
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.login1{
+  margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+.container{
+  width: 700px;
+  border: 3px solid black;
+  margin: auto;
+  padding: 10px;
+  /* overflow : hidden을 부여하면 이미지가 붕뜨는것을 잡음 */
+  overflow: hidden;
+}
+p{
+  font-size: 16px;
+  /* 줄 간격 */
+  /* line-height: 50px; */
+  margin-top: 0px;
+  /* text 양쪽 정렬 */
+  text-align: justify;
+}
+img{
+  /* float-부모태그의 높이값을 잃어버림 */
+  /* 뜬다, 공중에 뜨다 라는 뜻이라서 float를 사용하면 내용이 붕 떠버림 */
+  float: left;
+}

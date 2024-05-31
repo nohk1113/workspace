@@ -1,0 +1,49 @@
+/* scale:1.1; */
+table{
+  /* 상하, 좌우 */
+margin: 20px auto;
+  width: 800px;
+  height: 400px;
+  
+}
+tr{
+  /* border: 1px solid black; */
+}
+td{
+vertical-align: middle;
+}
+tbody>tr:hover{
+  background-color: gray;
+}
+
+.no{
+  background-color: rgb(153, 152, 240);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: aliceblue;
+  height: 60px;
+  border-top: 1px solid black;
+border-bottom: 2.5px solid black;
+}
+tr>td:nth-child(1){
+  text-align: center;
+width: 80px;
+  
+}
+tr>td:nth-child(3){
+  text-align: center;
+}
+tr>td:nth-child(4){
+  text-align: center;
+}
+tr>td:nth-child(5){
+  text-align: center;
+}
+tbody>tr:nth-child(2n){
+  background-color: rgb(212, 212, 212);
+  border-top: 1px solid rgb(110, 110, 110);
+  border-bottom: 1px solid rgb(119, 119, 119);
+}
+
+/* ....................................2.......... */

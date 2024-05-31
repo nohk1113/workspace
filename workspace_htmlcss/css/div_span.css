@@ -1,0 +1,20 @@
+.d1{
+  border: 1px solid blueviolet;
+  width: 100px;
+  height: 100px;
+  /* 블록을 가로로 인위적으로 변경 */
+  display: inline-block;
+}
+input{
+  width: 100px;
+}
+.d2{
+  background-color: blueviolet;
+  width: 300px;
+  height: 100px;
+}
+span{
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}

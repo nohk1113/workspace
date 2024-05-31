@@ -1,0 +1,82 @@
+.container{
+  margin: auto;
+  margin-top: 16px;
+  width: 800px;
+  height: 600px;
+  flex-basis: 80%;
+  border: 1px solid black;
+}
+.container>div{
+  display: flex;
+}
+.container>div:nth-child(1){
+  height:10%;
+  border: 3px solid lawngreen;
+}
+.container>div:nth-child(1)>div:nth-child(1){
+  flex-basis: 60%;
+  border: 3px solid magenta;
+}
+.container>div:nth-child(1)>div:nth-child(2){
+  flex-basis: 40%;
+  border: 3px solid lightseagreen;
+}
+.container>div:nth-child(2){
+  height: 80%;
+  border: 3px solid lightcoral;
+}
+.container>div:nth-child(2)>div:nth-child(1){
+flex-basis: 20%;
+border: 3px solid orangered;
+}
+.container>div:nth-child(2)>div:nth-child(2){
+flex-basis: 80%;
+border: 3px solid cornflowerblue;
+}
+
+.container3{
+  margin: auto;
+  margin-top: 16px;
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+}
+
+
+
+.head1{
+  background-color: yellow;
+  height: 10%;
+  width: 100%;
+}
+ .main3{
+  display: flex;
+  width: 100%;
+  border: 1px solid green;
+  height: 80%;
+ }
+.main3> div{
+  border: 1px solid greenyellow;
+}
+.main3:div:first-child{
+  flex-basis: 60%;
+}
+.main3:div:last-child{
+  flex-basis: 40%;
+}
+.gg{
+  display: flex;
+  flex-direction: column;
+}
+.gg> div{
+  border: 3px solid mediumaquamarine;
+}
+.gg>div:nth-child(1){
+flex-basis: 33.3%;
+}
+.gg>div:nth-child(2){
+  flex-basis: 33.3%;
+}
+.gg>div:nth-child(3){
+  flex-basis: 33.3%;
+}
