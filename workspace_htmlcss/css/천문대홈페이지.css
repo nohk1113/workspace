@@ -1,0 +1,61 @@
+body{
+  width:1200px;
+}
+
+.thead{
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(70, 70, 146);
+  color: white;
+}
+
+.thead>h3{
+  font-size: 1.6rem;
+  border: 1px solid black;
+}
+
+.thead>ul{
+  background-color: rgb(21, 21, 109);
+  display: flex;
+  padding: 8px 0px;
+  font-size: 13px;
+  border: 1px solid black;
+  width: 500px;
+  
+}
+
+.thead li{
+  margin: 8px;
+
+}
+
+.list li{
+line-height: 35px;
+
+}
+.center{
+  display: flex;
+  width: 100%;
+  border: 2px solid green;
+
+}
+.list{
+width: 100%;
+}
+.list>ul{
+display: flex;
+}
+.list>img{
+height: 100%;
+}
+
+.up{
+  background-color: rgba(49, 42, 42, 0.7);
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 20px 50px;
+}

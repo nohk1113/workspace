@@ -1,0 +1,152 @@
+.container{
+  width: 1200px;
+  margin: auto;
+}
+.header{
+  display: flex;
+  /*  블록 자체를 좌우로 정렬 */
+  justify-content: space-between;
+  /* 블록 자체를 위아래 정렬 */
+  align-items: center;
+  background-color: #0c51a6;
+  color: white;
+  height: 100px;
+}
+
+.header>h1{
+  /*  제목 왼쪽 여백  */
+  margin-left: 40px;
+}
+.header>ul{
+  /* 제목 오른쪽 목록 가로로 배치 */
+  display: flex;
+  background-color: #0c4288;
+  width: 650px;
+  padding: 15px 0px;
+  /* flex 블록이 가로로 적당한 거리 넓힘 */
+  justify-content: space-around;
+}
+
+.header>ul a{
+color: white;
+text-decoration: none;
+}
+img{
+  /* 이미지가 인라인 속성이라서 여백이 생김
+  그래서 블록으로 만들어주어 여백을 없애버린다 */
+  display: block;
+}
+
+.banner{
+  position: relative;
+}
+
+.banner>img{
+  width: 100%;
+}
+
+.banner>div{
+  /* rgba 에서 a는 투명도 */
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+text-align: center;
+/* 상하, 좌우 */
+padding: 20px 30px;
+/* 마이너스 몇 % 를 넣어야함
+화면 가운데 넣는 법 */
+transform: translate(-50%, -50%);
+}
+.banner h2{
+  margin-bottom: 12px;
+}
+.content{
+  display: flex;
+}
+
+.content>div{
+width: 400px;
+}
+.content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.board{
+  background-color: white;
+  padding: 16px;
+}
+.board a{
+  color: black;
+  text-decoration: none;
+}
+.bord>h2{
+  margin-bottom: 10px;
+}
+.board li{
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.banner-div{
+  /* 포지션 앱솔루트 줄때 부모 태그에 항상 주어야함 */
+  position: relative;
+}
+
+.banner-div>div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner-div span{
+  /* rgba의 a는 투명도 설정 최대 1 */
+  background-color: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.banner-div h2{
+margin-bottom: 20px;
+}
+.footer{
+  height: 100px;
+  display: flex;
+  /* 플렉스인 요소의 글자를 가운데 배치 */
+  align-items: center;
+  background-color: rgb(240, 233, 224);
+}
+
+.footer>h2{
+  width: 20%;
+color: rgb(117, 117, 117);
+margin-left: 30px;
+}
+
+.footer>div{
+  width: 80%;
+  text-align: center;
+}
+
+.footer ul{
+  /* 맨 밑에 글자 옆으로 배치 */
+  display: flex;
+  /* 블록을 가로 길이만 줄이면 마진으로 위치조정이 가능함 */
+  width: 650px;
+  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  /* span태그는 마진을 줄수없다 */
+}
+.footer a{
+  color: black;
+  /* 글자 밑줄 없애기 */
+  text-decoration: none;
+}
