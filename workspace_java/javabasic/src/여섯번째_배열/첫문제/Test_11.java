@@ -1,4 +1,4 @@
-package 여섯번째_배열;
+package 여섯번째_배열.첫문제;
 
 public class Test_11 {
     public static void main(String[] args) {

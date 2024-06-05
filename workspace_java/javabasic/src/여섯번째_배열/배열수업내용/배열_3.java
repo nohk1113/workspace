@@ -1,4 +1,4 @@
-package 여섯번째_배열;
+package 여섯번째_배열.배열수업내용;
 
 public class 배열_3 {
     public static void main(String[] args) {

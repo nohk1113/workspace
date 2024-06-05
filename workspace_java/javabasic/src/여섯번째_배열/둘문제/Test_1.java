@@ -12,10 +12,14 @@ public class Test_1 {
 
         for(int i=0; i< num.length;i++ ){
             num[i]=i+1;
+            System.out.print(num[i]+" ");
         }
-        if(){
-
+        int sum=0;
+        for(int e: num){
+            sum=sum+e;
         }
+        System.out.println(" ");
+        System.out.println(sum/(double)num.length);
 
     }
 }
