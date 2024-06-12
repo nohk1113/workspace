@@ -1,4 +1,4 @@
-package class_basic;
+package class_basic.MultiTest;
 
 public class Student {//  이것은 설계도임
     String name;

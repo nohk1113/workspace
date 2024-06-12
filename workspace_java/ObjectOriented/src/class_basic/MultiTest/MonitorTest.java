@@ -1,4 +1,4 @@
-package class_basic;
+package class_basic.MultiTest;
 // 객체 만드는 문법 매우 중요함
 public class MonitorTest {
     public static void main(String[] args) {

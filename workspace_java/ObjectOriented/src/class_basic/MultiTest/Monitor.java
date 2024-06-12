@@ -1,4 +1,4 @@
-package class_basic;
+package class_basic.MultiTest;
 /*
 클레스를 구성하는 멤버(요소)
 변수, 메서드의 정의, 생성자

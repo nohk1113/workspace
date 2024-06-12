@@ -17,6 +17,7 @@ public class Phone {
 
     // 생성자
     public Phone(){
+        // this를 붙이는 이유는 이름이 중복되어서 값을 같이 주게 되면 원하는 곳에 넣기위해...
         this.prise=0;
         this.modelName="";
     }

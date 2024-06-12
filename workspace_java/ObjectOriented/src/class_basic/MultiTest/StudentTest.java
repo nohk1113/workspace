@@ -1,4 +1,4 @@
-package class_basic;
+package class_basic.MultiTest;
 
 public class StudentTest {
     public static void main(String[] args) {

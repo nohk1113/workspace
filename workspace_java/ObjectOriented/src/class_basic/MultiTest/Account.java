@@ -1,4 +1,4 @@
-package class_basic;
+package class_basic.MultiTest;
 // 좋은 조건의 여건
 // 멤버 변수는 반드시 초기값을 설정!!
 // 초기값 설정은 멤버변수의 선언과는 별도로 진행!!

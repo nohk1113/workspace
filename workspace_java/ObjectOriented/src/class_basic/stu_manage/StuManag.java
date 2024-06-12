@@ -1,0 +1,60 @@
+package class_basic.stu_manage;
+
+import javax.lang.model.element.Name;
+import java.security.PublicKey;
+import java.util.Scanner;
+
+// 학생관리 클래스는 학생등록, 학생정보변경(연락처), 학생정보출력의 기능이 있다.
+public class StuManag {
+    // 키보드 입력값 !!!!!! 이렇게!!!
+    private Scanner sc;   // 키보드 입력을 위해 선언
+    private Stu[] students;  // 학생을 저장할수있는 공간을 만듦
+    private int idx;  // 학생 배열의 요소
+
+//    생성자
+    public StuManag(){    // ***
+        sc=new Scanner(System.in);
+        students=new Stu[3];   // 3명의 학생을 저장 할수있음
+        idx=0;
+    }
+//    학생등록 메서드
+    public void regStu(){
+        if (idx>=3) {
+            System.out.println("더이상 학생을 등록할수 없습니다~");
+        }
+        else {
+            System.out.println("학생등록실행을 실행합니다. 학생 정보를 입력하세요!");
+            System.out.print("이름 :");
+            String name=sc.next();
+            System.out.print("나이 :");
+            int sge=sc.nextInt();
+            System.out.print("연락처 :");
+            String tel=sc.next();
+            System.out.print("학점 :");
+            String grade=sc.next();
+
+            // 입력받은 정보로 학생 객체를 생성
+            Stu stu=new Stu(name,sge, grade,tel);
+
+            // 생성한 학생 객체를 배열에 저장
+            students[idx]=stu;
+            idx++;  // 입력하면 배열의 숫자가 1씩 올라감
+        }
+    }
+//    학생정보 변경 메서드(연락처)
+    public void changeInfo(){
+        System.out.println("정보변경실행");
+    }
+//    학생정보출력 메서드
+    public void print(){
+        System.out.println("정보 출력");
+    }
+//    모든 학생 정보 출력 메서드
+    public void printAll(){
+        System.out.println("모든 정보 출력, 현재 총 학생의 수는 "+idx+"명입니다 *^^*");
+        for (int i=0; i<idx;i++){
+            students[i].showInfo();
+            System.out.println();
+        }
+    }
+}
