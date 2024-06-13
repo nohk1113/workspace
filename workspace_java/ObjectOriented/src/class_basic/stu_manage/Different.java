@@ -1,6 +1,4 @@
-package class_basic;
-
-import java.sql.SQLOutput;
+package class_basic.stu_manage;
 
 public class Different {
     public static void main(String[] args) {
