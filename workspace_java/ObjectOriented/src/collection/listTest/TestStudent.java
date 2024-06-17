@@ -13,24 +13,38 @@ public class TestStudent {
         list.add(student2);
         list.add(student3);
 
-        for(int i=0; i<list.size();i++){
-            System.out.println(list.get(i));
+//        for(int i=0; i<list.size();i++){
+//            System.out.println(list.get(i));
+//        }
+        for(Student e : list){
+            System.out.println(e);
         }
 
-        System.out.println("________________________________________");
+        System.out.println("_________________________________________________");
 
         int num=0;
         for (int i=0; i<list.size();i++){
             if(list.get(i).getTotal()>=150){
-                num=i;
+                System.out.println(list.get(i));
             }
-            System.out.println(list.get(num));
-
-            System.out.println("--------------------------");
-
         }
+        System.out.println("-----------------------------------------------");
+// 모든 학생에 대한 총점 에 대한 평균 점수
+        int sum=0;
+        for (Student e:list){
+            sum=sum+e.getTotal();
+        }
+        System.out.println(sum/(double)list.size());
+
+        System.out.println("---------------------------------------------------------");
+        int index = 0;   // 총점이 1등인 학생의 index
+        int max = 0;
         for (int i=0; i<list.size();i++){
-            if(list.get(i).getTotal())
+            if(max <list.get(i).getTotal()){
+                max = list.get(i).getTotal();
+                index=i;
+            }
         }
+        System.out.println(list.get(index));
     }
 }
