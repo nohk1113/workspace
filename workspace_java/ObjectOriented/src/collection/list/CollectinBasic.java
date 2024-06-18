@@ -1,4 +1,4 @@
-package collection;
+package collection.list;
 
 public class CollectinBasic {
     /*
