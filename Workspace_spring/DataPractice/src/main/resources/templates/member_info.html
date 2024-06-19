@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--  커멘드 객체는 model을 사용하지 않아도 자동으로 html 로 전달 된다
+     이때 넘어가는 데이터는 클래스 명에서 앞글자만 소문자로 바꾼 이름으로 넘어간다 -->
+  <form action="/reg_member" method="get">
+이름 생일... [[${memberVO}]]
+아이디  [[${memberVO.id}]]
+    <input type="submit" value="뒤로가기">
+  </form>
+</body>
+</html>
