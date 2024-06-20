@@ -1,26 +1,22 @@
 package com.green.DataPractice.vo;
 
+import java.util.Arrays;
+
 public class ScoreControllerVO {
     private String name;
     private String grand;
-    private String tell;
+    private String[] tell;
     private String gender;
     private int koScore;
     private int enScore;
     private int maScore;
     private double avg;
 
+
+
     public double avg(){
-        avg=(koScore+enScore+maScore)/3;
+        avg=(koScore+enScore+maScore)/3.0;
         return avg;
-    }
-
-    public double getAvg() {
-        return avg;
-    }
-
-    public void setAvg(double avg) {
-        this.avg = avg;
     }
 
     public String getName() {
@@ -39,13 +35,15 @@ public class ScoreControllerVO {
         this.grand = grand;
     }
 
-    public String getTell() {
+    public String[] getTell() {
         return tell;
     }
 
-    public void setTell(String tell) {
+    public void setTell(String[] tell) {
         this.tell = tell;
     }
+
+
 
     public String getGender() {
         return gender;
@@ -79,16 +77,25 @@ public class ScoreControllerVO {
         this.maScore = maScore;
     }
 
+    public double getAvg() {
+        return avg;
+    }
+
+    public void setAvg(double avg) {
+        this.avg = avg;
+    }
+
     @Override
     public String toString() {
         return "ScoreControllerVO{" +
                 "name='" + name + '\'' +
                 ", grand='" + grand + '\'' +
-                ", tell='" + tell + '\'' +
+                ", tell=" + Arrays.toString(tell) +
                 ", gender='" + gender + '\'' +
                 ", koScore=" + koScore +
                 ", enScore=" + enScore +
                 ", maScore=" + maScore +
+                ", avg=" + avg +
                 '}';
     }
 }

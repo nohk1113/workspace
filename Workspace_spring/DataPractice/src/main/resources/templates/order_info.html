@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/order_info" method="post">
+    <h2>주문서</h2>  <br>
+    <h3>주문 정보</h3> <br>
+    [[${orderVO.menu}]]  ( [[${orderVO.num}]] 마리 ) <br>
+    추가사항 : 
+    <th:block th:each="add : ${orderVO.add}">
+      [[${add}]]
+    </th:block>   <br>
+    <!--  마리수*10000+옵션 수*1000 -->
+    주문 금액 :  [[${orderVO.num*10000+#arrays.length(orderVO.add)*1000}]]  <br>
+    요청사항 : [[${orderVO.req}]]   <br>
+    <br> <h3>배달배달</h3> <br>
+    주문자 :  [[${deliveryVO.name}]] <br>
+    연락처 : [[${deliveryVO.tell}]]  <br>
+    배달 주소 : [[${deliveryVO.adrr}]]  <br>
+  </form>
+</body>
+</html>

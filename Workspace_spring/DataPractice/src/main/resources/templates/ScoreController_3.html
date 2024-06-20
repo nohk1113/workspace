@@ -8,13 +8,14 @@
 <body>
   <!-- 폼 대그안에있는 인풋 태그의 벨류 값을 가져간다.
    주의 사항 : 인풋 태그에는 반드시 네임 속성이 있어야한다. -->
+   <h2>학생 성적 입력 프로그램</h2>   <br>
+   [[${scoreControllerVO.name}]]  학생의 성적을 입력합니다  <br>
   <form action="/ScoreController_4" method="post">
-    <h2>학생 성적 입력 프로그램</h2>   <br>
-    [[${name}]]  학생의 성적을 입력합니다  <br>
-    <input type="hidden" name="name" value="${name}">
-    <input type="hidden" name="tell" value="${tell}">
-    <input type="hidden" name="gender"value="${gender}">
-    <input type="hidden" name="grade" value="${grade}">
+    <input type="hidden" name="name" th:value="${scoreControllerVO.name}">
+    <input type="hidden" name="tell" th:value="${scoreControllerVO.tell[0]}">
+    <input type="hidden" name="tell" th:value="${scoreControllerVO.tell[1]}">
+    <input type="hidden" name="gender"th:value="${scoreControllerVO.gender}">
+    <input type="hidden" name="grand" th:value="${scoreControllerVO.grand}">
     국어  <input type="text" name="koScore">
     영어  <input type="text" name="enScore">
     수학  <input type="text" name="maScore">

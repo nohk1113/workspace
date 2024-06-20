@@ -1,9 +1,6 @@
 package com.green.DataPractice.controller;
 
-import com.green.DataPractice.vo.LoginVO;
-import com.green.DataPractice.vo.MemberVO;
-import com.green.DataPractice.vo.ScoreControllerVO;
-import com.green.DataPractice.vo.SurveyVO;
+import com.green.DataPractice.vo.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ConcurrentModel;
 import org.springframework.ui.Model;
@@ -83,27 +80,47 @@ public class DataController {
         return "ScoreController";
     }
     @PostMapping("/ScoreController_2")
-    public String ScoreController_2(ScoreControllerVO scoreControllerVO, Model model){
-        model.addAttribute("name", scoreControllerVO.getName());
+    public String ScoreController_2(ScoreControllerVO scoreControllerVO){
 
+
+        System.out.println(scoreControllerVO);
         return "ScoreController_2";
     }
     @PostMapping("/ScoreController_3")
-    public String ScoreController_3(ScoreControllerVO scoreControllerVO, Model model){
-        model.addAttribute("name", scoreControllerVO.getName());
+    public String ScoreController_3(ScoreControllerVO scoreControllerVO){
+
+        System.out.println(scoreControllerVO);
         return "ScoreController_3";
     }
     @PostMapping("/ScoreController_4")
-    public String ScoreController_4(ScoreControllerVO scoreControllerVO, Model model){
-        model.addAttribute("name", scoreControllerVO.getName());
-        model.addAttribute("grade", scoreControllerVO.getGrand());
-        model.addAttribute("tell", scoreControllerVO.getTell());
-        model.addAttribute("gender", scoreControllerVO.getGender());
-        model.addAttribute("koScore", scoreControllerVO.getKoScore());
-        model.addAttribute("enScore", scoreControllerVO.getEnScore());
-        model.addAttribute("maScore", scoreControllerVO.getMaScore());
-        model.addAttribute("avg", scoreControllerVO.getAvg());
+    public String ScoreController_4(ScoreControllerVO scoreControllerVO){
 
+
+        System.out.println(scoreControllerVO);
         return "ScoreController_4";
     }
+@GetMapping("/first")
+    public String scoreFirst(){
+    return "score_first";
+    }
+
+//    치킨 주문 받는 메소드
+
+    @GetMapping("/order")
+    public String order(OrderVO orderVO){
+        return "order";
+    }
+    @PostMapping("/delivery")
+    public String delivery(OrderVO orderVO, DeliveryVO deliveryVO){
+        System.out.println(orderVO);
+        System.out.println(deliveryVO);
+        return "delivery";
+    }
+    @PostMapping("/order_info")
+    public String order_info(OrderVO orderVO, DeliveryVO deliveryVO){
+        System.out.println(orderVO);
+        System.out.println(deliveryVO);
+        return "order_info";
+    }
+
 }

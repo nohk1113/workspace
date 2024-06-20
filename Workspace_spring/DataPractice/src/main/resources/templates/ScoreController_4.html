@@ -7,16 +7,20 @@
 </head>
 <body>
   <h2>학생성적 입력 프로그램</h2>
-  [[${name}]] 학생의 정보 입니다
+  [[${scoreControllerVO.name}]] 학생의 정보 입니다
   <form action="/ScoreController" method="get">
-이름 : [[${name}]]  <br>
-학년 : [[${grade}]]  <br>
-연락처 : [[${tell}]]  <br>
-성별 : [[${gender}]]  <br>
-국어 : [[${koScore}]]  <br>
-수학 : [[${maScore}]]  <br>
-영어 : [[${enScore}]]  <br>
-평균 : [[${avg}]]  <br>
+이름 : [[${scoreControllerVO.name}]]  <br>
+학년 : [[${scoreControllerVO.grand}]]  <br>
+연락처 : [[${scoreControllerVO.tell[0]}]]  [[${scoreControllerVO.tell[1]}]]<br>
+성별 : [[${scoreControllerVO.gender}]]  <br>
+국어 : [[${scoreControllerVO.koScore}]]  <br>
+수학 : [[${scoreControllerVO.maScore}]]  <br>
+영어 : [[${scoreControllerVO.enScore}]]  <br>
+평균 : [[${scoreControllerVO.avg}]]  <br>
+평균 : [[${(scoreControllerVO.koScore+scoreControllerVO.enScore+scoreControllerVO.maScore)/3.0}]]  <br>
+<form action="/ScoreController" method="get">
+  <input type="submit" value="시작페이지 가기">
+</form>
   </form>
 </body>
 </html>
