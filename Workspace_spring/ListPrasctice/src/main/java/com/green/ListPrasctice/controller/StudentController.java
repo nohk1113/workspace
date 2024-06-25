@@ -71,6 +71,7 @@ public class StudentController {
 // 학생 정보 수정+ 상세 페이지로 이동
     @PostMapping("/updateStu")
     public String updateStu(StudentVO studentVO){
+//        학생정보 수정
         studentService.updateStu(studentVO);
         return "redirect:/detail?stuNum="+studentVO.getStuNum();
     }

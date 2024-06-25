@@ -44,11 +44,11 @@ List<StudentVO> list=new ArrayList<>();
     public void updateStu(StudentVO studentVO){
 //        리스트에서 정보를 수정하고자 하는 학생을 찾아 그 학생의 정보를 input  태그 및 textarea에서 입력한 정보로 변경한다.
         for (StudentVO student:list){
-            if(student.getStuNum()==student.getStuNum()){  // 학번
-                student.setName(student.getName());
-                student.setKoScore(student.getKoScore());
-                student.setEnScore(student.getEnScore());
-                student.setIntro(student.getIntro());
+            if(student.getStuNum()==studentVO.getStuNum()){  // 학번
+                student.setName(studentVO.getName());
+                student.setKoScore(studentVO.getKoScore());
+                student.setEnScore(studentVO.getEnScore());
+                student.setIntro(studentVO.getIntro());
             }
         }
     }

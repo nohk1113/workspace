@@ -7,15 +7,13 @@
 </head>
 <body>
   <form action="/updateStu" method="post">
-    <input type="hidden" name="stuNum" th:value="${student.name}">
-    <input type="hidden" name="koScore" th:value="${student.koScore}">
-    <input type="hidden" name="enScore" th:value="${student.enScore}">
+    <input type="hidden" name="stuNum" th:value="${student.stuNum}">
   <table>
     <tr>
       <td>학번</td>
       <td>[[${student.stuNum}]]</td>
       <td>이름</td>
-      <td><input type="text" name="stuNum" th:value="${student.name}"></td>
+      <td><input type="text" name="name" th:value="${student.name}"></td>
     </tr>
     <tr>
       <td>국어점수</td>
@@ -28,7 +26,7 @@
       <td><textarea name="intro">[[${student.intro}]]</textarea></td>
     </tr>
   </table>
-  <input type="submit" value="뒤로갈랭?">
+  <input type="button" value="뒤로갈랭?">
   <button type="submit">정보 수정</button>
 </form>
 </body>
