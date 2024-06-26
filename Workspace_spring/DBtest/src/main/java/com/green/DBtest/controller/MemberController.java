@@ -5,6 +5,7 @@ import jakarta.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+// MemberController m = new MemberController();    객체 생성
 @Controller
 public class MemberController {
     @Resource(name= "memberService")
