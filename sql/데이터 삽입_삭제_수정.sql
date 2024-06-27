@@ -71,4 +71,12 @@ MEM_NUM INT PRIMARY KEY    -- 중복 불가, NULL 불가
    
    SELECT * FROM test_member;
    
+    SELECT MEM_NUM, MEM_NAME, MEM_AGE, MEM_ADDR
+    FROM test_member;
+   
+   DELETE FROM test_member
+   WHERE MEM_NUM=1;
+   
+   ROLLBACK;
+   
    
