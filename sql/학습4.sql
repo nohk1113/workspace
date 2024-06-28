@@ -10,3 +10,12 @@
    
 INSERT INTO SCORE_INFO
 VALUES (1, '홍길동', 80,90,'반가워요');
+
+    SELECT STU_NUM
+    , STU_NAME
+    , KOR_SCORE
+    , ENG_SCORE
+    , INTRO
+    FROM SCORE_INFO;
+        WHERE STU_NUM =1;
+    

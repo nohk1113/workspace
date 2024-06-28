@@ -22,18 +22,19 @@
     <th:bolck th:unless="${#lists.isEmpty(stuList)}">
       <tr th:each="stu:${stuList}">
         <td>[[${stu.stuNum}]]</td>
-        <td>[[${stu.stuName}]]</td>
+        <!-- th:href = "@{}" -->
+        <td><a th:href="@{/student_detail(stuNum=${stu.stuNum})}">[[${stu.stuName}]]</a></td>
         <td>[[${stu.korScore}]]</td>
         <td>[[${stu.engScore}]]</td>
         <td>[[${stu.korScore+stu.engScore}]]</td>
       </tr>
     </th:bolck>
   </table>
-  <input type="button" value="학생 등록" onclick="goInsert()">
+  <input type="button" value="학생 등록" onclick="goReg()">
 
   <script>
-    function doInsert(){
-      location.href='reg_student';
+    function goReg(){
+      location.href='/reg_student';
     }
   </script>
 </body>

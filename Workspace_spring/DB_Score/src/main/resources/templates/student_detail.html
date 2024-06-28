@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  상세페이지
+<table border="1">
+  <tr>
+    <td>학번</td>
+    <td>[[${student.stuNum}]]</td>
+    <td>이름</td>
+    <td>[[${student.stuName}]]</td>
+  </tr>
+  <tr>
+    <td>국어점수</td>
+    <td>[[${student.korScore}]]</td>
+    <td>영어점수</td>
+    <td>[[${student.engScore}]]</td>
+  </tr>
+  <tr>
+    <td>자기소개</td>
+    <td>[[${student.intro}]]</td>
+  </tr>
+</table>
+<input type="button" value="뒤로가기" onclick="goBack()"> 
+<input type="button" value="학생 수정" th:onclick="goupdate([[${student.stuNum}]])">
+<!-- th:  는 html에서만 가용 가능        삭제할 정보를 넘기는 문법  "godelete([[${student.stuNum}]])"-->
+<input type="button" value="학생 정보 삭제" th:onclick="godelete([[${student.stuNum}]])">
+
+<!-- 페이지 뒤로가기 -->
+<script>
+  function goBack(){
+ location.href='/';
+  }
+
+  // 학생 정보 수정
+  function goupdate(stuNum){
+    location.href=`/update?stuNum=${stuNum}`;
+  }
+
+//  학생 정보의 삭제를 위한 문법 
+  function godelete(stuNum){
+    location.href=`/delete?stuNum=${stuNum}`;
+  }
+</script>
+</body>
+</html>

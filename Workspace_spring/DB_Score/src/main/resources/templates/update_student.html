@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/update2" method="post">
+    <input type="hidden" name="stuNum" th:value="${student.stuNum}">
+  수정페이지
+  <br>
+    학번  : [[${student.stuNum}]]<br>
+    이름 :<input type="text" name="stuName" th:value="${student.stuName}"> <br>
+    수학점수 :<input type="text" name="korScore" th:value="${student.korScore}"> <br>
+    영어점수 :<input type="text" name="engScore" th:value="${student.engScore}"> <br>
+    학생소개 :<textarea name="intro" >[[${student.intro}]]</textarea>  <br>
+    <input type="submit" value="등록 완료">
+  </form>
+</body>
+</html>
