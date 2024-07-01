@@ -14,12 +14,12 @@
       <td>영어 점수</td>
       <td>총점</td>
     </tr>
-    <th:bolck th:if="${#lists.isEmpty(stuList)}">
+    <th:block th:if="${#lists.isEmpty(stuList)}">
       <tr>
         <td colspan="5">조회된 학생이 없습니다</td>
       </tr>
-    </th:bolck>
-    <th:bolck th:unless="${#lists.isEmpty(stuList)}">
+    </th:block>
+    <th:block th:unless="${#lists.isEmpty(stuList)}">
       <tr th:each="stu:${stuList}">
         <td>[[${stu.stuNum}]]</td>
         <!-- th:href = "@{}" -->
@@ -28,7 +28,7 @@
         <td>[[${stu.engScore}]]</td>
         <td>[[${stu.korScore+stu.engScore}]]</td>
       </tr>
-    </th:bolck>
+    </th:block>
   </table>
   <input type="button" value="학생 등록" onclick="goReg()">
 
