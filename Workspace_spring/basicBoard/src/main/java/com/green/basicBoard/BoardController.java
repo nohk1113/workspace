@@ -43,11 +43,23 @@ public class BoardController {
         boardService.insertBoard(boardVO);
         return "redirect:/";
     }
-// 상세보기 페이지 + 뒤로, 삭제, 수정
+// 상세보기 페이지 + 뒤로   + 조회수 증가
     @GetMapping("/detail")
     public String boardDetail(@RequestParam(name = "boardNum") int boardNum, Model model){
         BoardVO boardVO = boardService.getBoardDetail(boardNum);
         model.addAttribute("board", boardVO);
+//        [[${board.boardNum}]]   << 해당 html에 이런식으로 적어야함
+
+//        조회수 증가하는 문법
+        boardService.updateReadCnt(boardNum);
         return "board_detail";
     }
+
+//    글 삭제
+    @GetMapping("/deleteBoard")
+    public String deleteBoard(@RequestParam(name="boardNum")int boardNum){
+        boardService.deleteBoard(boardNum);
+        return "redirect:/";
+    }
+
 }

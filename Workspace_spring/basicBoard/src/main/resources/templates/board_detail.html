@@ -29,6 +29,20 @@
         <td>[[${board.content}]]</td>
       </tr>
     </table>
+    <input type="button" value="☆목록가기☆ 1" onclick="test1()">
+    <input type="button" value="☆목록가기☆ 2" onclick="test2()">
+    <input type="button" value="삭제" th:onclick="deleteBoard()">
   </table>
+  <script>
+    function test1(){
+      history.back(-1)
+    }
+    function test2(){
+      location.href='/';
+    }
+    function deleteBoard(){
+      location.href='/deleteBoard?boardNum=${board.boardNum}'
+    }
+  </script>
 </body>
 </html>

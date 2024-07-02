@@ -39,3 +39,5 @@ FROM basic_board
 WHERE TITLE LIKE '%안녕%';
 WHERE WRITER LIKE '%java%'; 
 
+
+SELECT * FROM basic_board;

@@ -47,6 +47,7 @@
         );
     </insert>
 
+<!--    빈값을 채우기 뤼해 가져온 vo객체 에서 겟터를 호출하여 빈값 채움-->
 <!--    게시글 상세보기-->
     <select id="getBoardDetail" resultMap="board">
         SELECT BOARD_NUM
@@ -59,7 +60,20 @@
         WHERE BOARD_NUM=#{boardNum};
     </select>
 
-<!--    글 상세보기-->
+<!--    게시글 삭제-->
+    <delete id="deleteBoard">
+        DELETE FROM BASIC_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </delete>
+
+<!--    게시글 조회수를 증가-->
+    <update id="updateReadCnt">
+        UPDATE BASIC_BOARD
+        SET
+        READ_CNT = READ_CNT + 1
+        WHERE BOARD_NUM = #{boardNum}
+    </update>
+
 </mapper>
 
 
