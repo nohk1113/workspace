@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="start" class="java">
+    <div>
+      <div>떡볶이</div>
+    </div>
+    <div>
+      <div>김밥</div>
+      <div>순대</div>
+    </div>
+    <div>
+      <!--  시작에서 부터 id 가 start인 태그의 class속성 값을 출력 -->
+      <div id="second">튀김</div>
+    </div>
+  </div>
+
+
+  <script>
+    const startTag=document.querySelector('#start');
+    const divs= startTag.children[1].children;
+
+    for(let i=0; i<divs.length ; i++){
+      console.log(divs[i].textContent);
+    }
+// 부모태그 선택하는 법
+    const secondTag =document.querySelector('#second');
+    const one= secondTag.parentElement.parentElement
+    console.log(one.className);
+
+    secondTag.closest('#start');   // 선택한 태그를 가장 가까운 태그를 찾아감
+  </script>
+</body>
+</html>
