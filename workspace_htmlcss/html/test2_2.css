@@ -1,0 +1,62 @@
+.head{
+  width:80%;
+  margin: auto;
+  line-height: 40px;
+}
+
+.addNum{
+  background-color: white;
+}
+
+input{
+  margin-left: 5px;
+}
+select{
+  margin-left: 5px;
+}
+
+table, tr, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.aa{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+
+}
+table> tbody >tr > td:first-child{
+padding-left: 10px;
+background-color: rgba(99, 99, 99, 0.08);
+}
+.bb{
+  color: red;
+}
+.ff{
+font-size: 14px;
+
+}
+.dd{
+font-size: 20px;
+font-weight: bold;
+}
+
+.dd2{
+  margin-top: 20px;
+  display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.tt{
+
+}
+table{
+  width: 100%;
+}
+.pp{
+  width: 40px;
+}
+.ww{
+  width: 35px;
+}

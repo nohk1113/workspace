@@ -2,6 +2,9 @@ body{
   width: 100vw;
   height: 100vh;
 }
+
+
+
 /* 상단 메뉴*/
 .menu{
   display: flex;
@@ -72,8 +75,15 @@ color: orange;
 .banner>input{
   background-color: rgb(235, 163, 30);
   color: aliceblue;
+  font-size: 1.2rem;
   border: none;
-  padding: 5px 20px;
+  padding: 5px 30px;
+  margin-top: 20px;
+}
+
+.banner>input:hover{
+  background-color: orange;
+  cursor: pointer;
 }
 
 .website{
@@ -113,14 +123,21 @@ color: orange;
   margin: 20px 0px;
 }
 
+
 .foot{
   text-align: center;
-  width: 100%;
-  border: 1PX solid green;
+  width: 50%;
 }
+
+.foot2{
+  justify-content: center;
+  display: flex;
+}
+
 .more{
   display: flex;
   justify-content: space-around;
+  padding: -20px;
 }
 .img{
   padding: 10px;
@@ -140,13 +157,15 @@ color: orange;
   color: aliceblue;
   font-size: 1.2rem;
   font-weight: 400;
-  margin-right: 80px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .text2{
   color: orange;
   font-size: 0.9rem;
-  margin-right: 200px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 
