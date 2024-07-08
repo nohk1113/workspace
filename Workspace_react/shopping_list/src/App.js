@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import List from './List';
+import Add from './Add';
 
 function App() {
   // 장보기 목록
@@ -11,9 +12,7 @@ function App() {
       <h3>Shopping List</h3>
       장보기 목록
       <List list={list}setList={setList}/>
-      <div className='box'>
-
-      </div>
+      <Add list={list} setList={setList}/>
     </div>
   );
 }
