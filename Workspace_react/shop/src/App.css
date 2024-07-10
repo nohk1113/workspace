@@ -1,0 +1,38 @@
+.header{
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 10px; 
+}
+
+.banner{
+  height: 200px;
+  width: 100%;
+}
+
+.banner>img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.item-list{
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.item{
+  text-align: center;
+}
+.item img{
+  width: 100%;
+}
+
+.item div{
+  margin: 0px;
+}

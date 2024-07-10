@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import axios from 'axios';
 
 function App() {
+
+  const response= axios.get('localhost:8080/test1');
+  console.log
 
   const [IsShow, setIsShow]=useState(false);
 
