@@ -14,7 +14,7 @@ public class Test4 {
         System.out.print("숫자를 입력하시오");
     int a=sc.nextInt();
         int hun=a/100;
-        int tens=a/10;
+        int tens=(a%100)/10;
     // 일의 자리
     int ones=a%10;
     // 박수의 횟수
@@ -24,7 +24,7 @@ public class Test4 {
 
         if (ones==3 || ones==6 || ones==9) {
             if (tens == 3 || tens == 6 || tens == 9) {
-                if (hun == 3 || hun == 6 || hun == 9) {
+                if (hun == 3 || hun == 6 || hun == 9 && hun!=0) {
 
 
                     clapCnt++;     // 같은말  clapCnt= clapCnt + 1, ++clapCnt

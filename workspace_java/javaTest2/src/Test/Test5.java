@@ -14,8 +14,15 @@ public class Test5 {
         int strike = 0;
         int ball=0;
 
-        for (int i=0; i<arr.length; i++){
+//        System.out.println("게임을 시작합니다~");
+//        int tryCnt=1;
+//        while (true){
+//            System.out.println(tryCnt+">>");
+//            tryCnt++;
+//        }
+
 //            겹치는 숫자가 없도록
+        for (int i=0; i<arr.length; i++){
             arr[i]=(int)(Math.random()*9+1);
             for(int j=0; j<i; j++){
                 if(arr[j]==arr[i]){

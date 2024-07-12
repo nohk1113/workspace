@@ -31,9 +31,7 @@ public class Bank {
 
     //1. 매개변수로 전달되는 계좌번호및 회원이름과 동일한 정보를 가진
     // 고객 정보를 리턴하는 메서드를 정의하시오.
-    public List<Client> getClient(ArrayList<Client>) {
-        return clientList;
-    }
+
     // 만약 매개변수로 전달된 계좌번호와 일치하는 고객이 없다면 null을 리턴하시오.
 
 
