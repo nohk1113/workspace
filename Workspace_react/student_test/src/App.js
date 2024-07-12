@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import data from './data';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <table>
+        <tr>
+          <td>No</td>
+          <td>학생명</td>
+          <td>국어점수</td>
+          <td>영어점수</td>
+          <td>수학점수</td>
+          <td>평균</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
     </div>
   );
 }
