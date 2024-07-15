@@ -17,7 +17,7 @@ const item_list=data;
         book shop
         <Link to='/list'>상품목록</Link>
         <Link to='/detail'>상품 상세</Link>
-     </div>
+    </div>
 
       <div className='banner'>
         <img src={process.env.PUBLIC_URL+'/header.jpg'}/>

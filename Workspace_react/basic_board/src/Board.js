@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Board=({list})=>{
+  const navigate=useNavigate();
   console.log(list);
 
   const params =  useParams();
@@ -26,6 +27,19 @@ const Board=({list})=>{
         <div>내영 : {board.content} </div>
         <div>작성자 : {board.witer} </div>
         <div>작성일 : {board.createDate} </div>
+        <div>
+          <button type='button' onClick={(e)=>{
+            list.forEach((board,i) => {
+              if(board.boardNum==boardNum){
+                list.splice(i,1);
+              }
+            });
+            // board.splice(, 1);
+             // arr[1,2,3]에서 2만 지우고 싶을때 (1, 1) 첫번째 배열에서 1개만 지우기
+
+            navigate('/');
+          }}> 삭제  </button>
+          </div>
       </div>
     </>
 

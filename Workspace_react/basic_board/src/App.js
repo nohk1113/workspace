@@ -37,12 +37,11 @@ function App() {
         {/*  boardNum 이라는 정보를 가져 가겠다는 의미 */}
         <Route path='/detail/:boardNum'  element={ <Board list={boardList}/> }/>
         <Route path='/wirte'
-         element={<Wirte list={boardList} setboardList={setboardList}/>}/>
+        element={<Wirte list={boardList} setboardList={setboardList}/>}/>
         {/* input 값 입력받기 연습 */}
         <Route path='/test' element={<Wirte/>}></Route>
         
       </Routes>
-     
     </div>
   );
 }
