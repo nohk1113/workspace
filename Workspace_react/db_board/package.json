@@ -37,6 +37,5 @@
       "last 1 safari version"
     ]
   },    
-  // 콤마를 꼭 넣어줘야함
   "proxy":"http://localhost:8080"
 }

@@ -4,6 +4,7 @@ import com.green.ReactBoard.VO.BoardVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
@@ -19,4 +20,17 @@ public class BoardServiceImpl implements BoardService{
         List<BoardVO> boardList =sqlSession.selectList("boardMapper.getBoardList");
         return boardList;  // 원하는 데이터를 리턴하는것이다
     }
+
+//    글등록
+    @Override
+    public void insertBoard(BoardVO boardVO) {
+        sqlSession.insert("boardMapper.insertBoard", boardVO);
+    }
+
+    @Override
+    public BoardVO getBoardDetail(int boardNum) {
+        BoardVO boardVO=sqlSession.selectOne("boardMapper.getBoardDetail", boardNum);
+        return boardVO;
+    }
+
 }
