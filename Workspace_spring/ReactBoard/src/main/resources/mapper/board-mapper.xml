@@ -25,16 +25,13 @@
 <!--    글등록-->
     <insert id="insertBoard">
         INSERT INTO REACT_BOARD (
-        BOARD_NUM
-        , BOARD_TITLE
-        , BOARD_WRITER
-        , CREATE_DATE
+            BOARD_TITLE
+            , BOARD_WRITER
+            , BOARD_CONTENT
         ) VALUES (
-        #{boardNum}
-        , #{boardTitle}
-        , #{boardContent}
-        , #{boardWriter}
-        , #{CreateDate}
+            #{boardTitle}
+            , #{boardWriter}
+            , #{boardContent}
         );
     </insert>
 

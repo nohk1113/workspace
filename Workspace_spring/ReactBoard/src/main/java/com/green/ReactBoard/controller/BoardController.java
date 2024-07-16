@@ -4,10 +4,7 @@ import com.green.ReactBoard.VO.BoardVO;
 import com.green.ReactBoard.service.BoardService;
 import jakarta.annotation.Resource;
 import lombok.Locked;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,10 +28,10 @@ public class BoardController {
        List<BoardVO> boardList=boardService.getBoardList();
         return boardList;
     }
-
-    @GetMapping("/write")
-    public String write(BoardVO boardVO){
-        return "write";
+//    글 등록 (포스트 맵핑으로 해야함)
+    @PostMapping("/write")
+    public void write(@RequestBody BoardVO boardVO){
+        boardService.insertBoard(boardVO);
     }
 
     @GetMapping("boardDetail/{boardNum}")
