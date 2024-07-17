@@ -4,6 +4,7 @@ import com.green.ReactBoard.VO.BoardVO;
 import com.green.ReactBoard.service.BoardService;
 import jakarta.annotation.Resource;
 import lombok.Locked;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,9 +34,15 @@ public class BoardController {
     public void write(@RequestBody BoardVO boardVO){
         boardService.insertBoard(boardVO);
     }
-
+//   상세페이지
     @GetMapping("boardDetail/{boardNum}")
     public BoardVO getBoardDetail(@PathVariable("boardNum")int boardNum){
         return boardService.getBoardDetail(boardNum);
+    }
+
+    //글 삭제
+    @DeleteMapping("/deleteBoard/{boardNum}")
+    public  void deleteBoard(@PathVariable("boardNUm")int boardNum){
+        boardService.deleteBoard(boardNum);
     }
 }

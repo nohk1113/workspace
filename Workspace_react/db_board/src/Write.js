@@ -18,14 +18,33 @@ const Write=(()=>{
   const [inputdata, setinputdata]=useState([]);
 
   // 서버에서 데이터를 받기
+  // 글등록 버튼 클릭시 실행하는 함수
   function regBoard(){
+    const title_input=document.querySelector('input[name="boardTitle"]');
+
+    // if(board.boardTitle==''){}
+
+    if(title_input.value==''){
+      alert('제목은 필수입력입니다');
+      title_input.focus();
+      return;
+    }
+
+    if(document.querySelector('input[name="boardWriter"]').value==''){
+      alert('작성자는 필수입력입니다');
+      return;
+    }
+
+
     axios
     .post('/write', board)  // 데이터를 가져올 주소  get:데이터 조회(SELECT)  post:데이터 삽입 (INSERT)
     .then((res)=>{
+      alert('게시글이 등록 되었습니다');
       setinputdata(res.data);
       navigate('/');
     })
     .catch((error)=>{
+      alert('글 등록 오류');
       console.log('※ axios 통신 중 오류 발생 ※');
       console.log(error);
     });
@@ -49,23 +68,25 @@ const Write=(()=>{
 
   return(
 
-    <table>
-      <tbody>
-        <tr>
-          <td>제목</td>
-          <td><input type="texte" name="boardTitle" onChange={(e)=>{changeBoard(e);}}></input></td>
-        </tr>
-        <tr>
-          <td>작성자</td>
-          <td><input type="texte" name="boardWriter" onChange={(e)=>{changeBoard(e);}}></input></td>
-        </tr>
-        <tr>
-          <td>내용</td>
-          <td><input type="texte" name="boardContent" onChange={(e)=>{changeBoard(e);}}></input></td>
-        </tr>
-      </tbody>
-      <button type="button" onClick={(e)=>{regBoard(e)}}>글 등록</button>
-    </table>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td>제목</td>
+            <td><input type="texte" name="boardTitle" onChange={(e)=>{changeBoard(e);}}></input></td>
+          </tr>
+          <tr>
+            <td>작성자</td>
+            <td><input type="texte" name="boardWriter" onChange={(e)=>{changeBoard(e);}}></input></td>
+          </tr>
+          <tr>
+            <td>내용</td>
+            <td><input type="textarea" name="boardContent" onChange={(e)=>{changeBoard(e);}}></input></td>
+          </tr>
+        </tbody>
+      </table>
+        <button type="button" onClick={(e)=>{regBoard(e)}}>글 등록</button>
+    </div>
   )
 });
 

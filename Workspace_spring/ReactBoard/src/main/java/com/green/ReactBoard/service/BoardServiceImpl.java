@@ -33,4 +33,9 @@ public class BoardServiceImpl implements BoardService{
         return boardVO;
     }
 
+    @Override
+    public void deleteBoard(int boardNum) {
+        sqlSession.delete("boardMapper.deleteBoard", boardNum);
+    }
+
 }

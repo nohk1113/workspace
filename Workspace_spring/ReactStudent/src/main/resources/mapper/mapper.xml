@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<mapper namespace="studentMapper">
+
+    <resultMap id="student" type="com.green.ReactStudent.StudentVO">
+        <id column="STU_NUM" property="stuNum"/>
+        <result column="STU_NAME" property="stuName"/>
+        <result column="KOR_SCORE" property="korScore"/>
+        <result column="ENG_SCORE" property="engScore"/>
+        <result column="MATH_SCORE" property="mathScore"/>
+        <result column="STU_AGE" property="stuAge"/>
+        <result column="STU_TELL" property="stuTell"/>
+        <result column="STU_ADDR" property="stuAddr"/>
+    </resultMap>
+
+<!--    목록 조회-->
+    <select id="getStudentList" resultMap="student">
+        SELECT STU_NUM
+        , STU_NAME
+        , KOR_SCORE
+        , ENG_SCORE
+        , MATH_SCORE
+        FROM REACT_STUDENT;
+    </select>
+
+<!--     글 등록 쿼리-->
+    <insert id="insertStudent">
+        INSERT INTO REACT_STUDENT (
+            STU_NAME
+        , STU_AGE
+        , STU_TELL
+        , STU_ADDR
+        ) VALUES (
+            #{stuName}
+        , #{stuAge}
+        , #{stuTell}
+        , #{stuAddr}
+        );
+    </insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

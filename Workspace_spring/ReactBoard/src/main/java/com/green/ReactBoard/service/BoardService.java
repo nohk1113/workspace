@@ -15,4 +15,7 @@ public interface BoardService {
 
 //    게시글 상세정보
     BoardVO getBoardDetail(int boardNum);
+
+    //글 삭제
+    void deleteBoard(int boardNum);
 }

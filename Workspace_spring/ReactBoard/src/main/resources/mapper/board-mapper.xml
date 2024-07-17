@@ -26,12 +26,12 @@
     <insert id="insertBoard">
         INSERT INTO REACT_BOARD (
             BOARD_TITLE
-            , BOARD_WRITER
-            , BOARD_CONTENT
+        , BOARD_CONTENT
+        , BOARD_WRITER
         ) VALUES (
             #{boardTitle}
-            , #{boardWriter}
-            , #{boardContent}
+        , #{boardContent}
+        , #{boardWriter}
         );
     </insert>
 
@@ -44,6 +44,12 @@
         FROM REACT_BOARD
         WHERE BOARD_NUM=#{boardNum};
     </select>
+
+<!--    게시글 삭제-->
+    <delete id="deleteBoard">
+        DELETE FROM REACT_BOARD
+        WHERE BOARD_NUM=#{boardNum}
+    </delete>
 
 </mapper>
 
