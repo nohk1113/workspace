@@ -1,9 +1,8 @@
 package com.green.ReactStudent;
 
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.ibatis.annotations.Update;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,8 +19,28 @@ public class StudentController {
         return studentList;
     }
 //    글 등록 페이지
-    @GetMapping("/regStu")
+    @PostMapping("/regStu")
     public void regStu(@RequestBody StudentVO studentVO){
+        System.out.println(studentVO);
         studentService.insertStudent(studentVO);
+    }
+
+//    상세보기
+    @GetMapping("/stuDetail/{stuNum}")
+    public StudentVO getStudentDetail(@PathVariable("stuNum") int stuNum){
+        System.out.println(stuNum);
+        return studentService.getStudentDetail(stuNum);
+    }
+
+//    삭제
+    @DeleteMapping("/delStu/{stuNum}")
+    public void delStudent(@PathVariable("stuNum")int stuNum){
+        studentService.delStu(stuNum);
+    }
+
+//     수정 페이지
+    @Update("/update")
+    public void updateStudent(@PathVariable StudentVO studentVO){
+        studentService.updtateStu(studentVO);
     }
 }

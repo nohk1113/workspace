@@ -6,6 +6,8 @@ import StudentList from './StudentList';
 import RegStu from './RegStu';
 import DelStu from './DelStu';
 import Score from './Score';
+import StuDetail from './StuDetail';
+import UpdateStu from './UpddateStu';
 function App() {
   const navigate=useNavigate();
 
@@ -32,6 +34,10 @@ function App() {
           <Route path='/delStu' element={<DelStu/>}/>
           {/* 학생 관리 페이지 */}
           <Route path='/score' element={<Score/>}/>
+          {/* 학생 상세정보 */}
+          <Route path='/stuDetail/:stuNum' element={<StuDetail/>}/>
+          {/* 학생 정보 수정 */}
+          <Route path='/update' element={<UpdateStu/>}/>
 
         </Routes>
       </div>

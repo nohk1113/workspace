@@ -37,3 +37,19 @@ ul span:hover{
   margin-top: 30px;
 }
 
+button{
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 1.5px solid rgb(255, 93, 182);
+  background-color: rgb(255, 237, 247);
+  margin: 10px 52px;
+}
+
+button:hover{
+  background-color: rgb(194, 246, 255);
+  cursor: pointer;
+  padding: 6px 22px;
+}
+
+
+

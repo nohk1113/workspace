@@ -32,13 +32,50 @@
         , STU_AGE
         , STU_TELL
         , STU_ADDR
+        , KOR_SCORE
+        , ENG_SCORE
+        , MATH_SCORE
         ) VALUES (
             #{stuName}
         , #{stuAge}
         , #{stuTell}
         , #{stuAddr}
+        , 0
+        , 0
+        , 0
         );
     </insert>
+
+<!--    상세보기 -->
+    <select id="getStuDetail" resultMap="student">
+        SELECT STU_NAME
+        , STU_AGE
+        , STU_TELL
+        , STU_ADDR
+        , KOR_SCORE
+        , ENG_SCORE
+        , MATH_SCORE
+        FROM REACT_STUDENT
+        WHERE STU_NUM=#{stuNum}
+    </select>
+
+    <delete id="delStu">
+        DELETE FROM REACT_STUDENT
+        WHERE STU_NUM=#{stuNum}
+    </delete>
+
+    <update id="updateStu">
+        UPDATE REACT_STUDENT
+        SET
+        STU_NAME = #{stuName},
+        STU_AGE = #{stuAge},
+        STU_TELL = #{stuTell},
+        STU_ADDR = #{stuAddr},
+        KOR_SCORE = #{korScore},
+        ENG_SCORE = #{engScore},
+        MATH_SCORE = #{mathScore}
+        WHERE STU_NUM = #{stuNum}
+    </update>
 
 </mapper>
 
