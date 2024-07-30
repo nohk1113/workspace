@@ -67,15 +67,13 @@
     <update id="updateStu">
         UPDATE REACT_STUDENT
         SET
-        STU_NAME = #{stuName},
-        STU_AGE = #{stuAge},
-        STU_TELL = #{stuTell},
-        STU_ADDR = #{stuAddr},
         KOR_SCORE = #{korScore},
         ENG_SCORE = #{engScore},
         MATH_SCORE = #{mathScore}
         WHERE STU_NUM = #{stuNum}
     </update>
+
+
 
 </mapper>
 

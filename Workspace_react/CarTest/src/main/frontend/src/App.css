@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.info {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.head{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.div>span{
+  width: 100%;
+  border: 2px solid rgb(255, 129, 188);
+  padding: 10px 50px;
+  background-color: rgb(255, 237, 250);
+}
+
+.div>span:hover{
+  background-color: rgb(213, 228, 255);
+  cursor: pointer;
+}
+
+.btn{
+border-radius: 47%;
+border: 1.5px solid rgb(255, 60, 119);
+padding: 10px;
+background-color: rgb(255, 229, 244);
+}
+
+.btn:hover{
+  background-color: rgb(214, 240, 255);
+  padding: 11px;
+  cursor: pointer;
+}
+
+/* info 의 테이블 꾸미기 */
+.list-list{
+  margin: 15px 0px;
+}
+
+.list{
+  margin-top: 15px;
+}
+.list-tr{
+  
+  display: flex;
+  justify-content: center;
+}
+
+.list-tr>td{
+  background-color: rgb(255, 240, 247);
+border-bottom: 4px double rgb(255, 47, 144);
+width: 200px;
+}

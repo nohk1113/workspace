@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import './StudentList.css';
-
+import { getStuList } from "./api";
 
 const StudentList=()=>{
 
@@ -10,8 +10,7 @@ const StudentList=()=>{
   const navigate=useNavigate();
 
 useEffect(() => {
-  axios
-  .get('/list')
+  getStuList()
   .then((res)=>{
     setStuList(res.data);
   })

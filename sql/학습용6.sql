@@ -67,3 +67,11 @@ DELETE FROM react_student
 WHERE STU_NUM=4;
 
 
+UPDATE react_student
+SET
+KOR_SCORE=90
+, ENG_SCORE=90
+, MATH_SCORE=90
+ WHERE STU_NUM=5;
+
+

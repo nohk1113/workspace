@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { getStuList } from "./api";
 
 
 const DelStu=()=>{
@@ -11,8 +12,7 @@ const DelStu=()=>{
 
 
   useEffect(() => {
-    axios
-    .get('/list')
+    getStuList()
     .then((res)=>{
       setStu(res.data);
     })
@@ -24,24 +24,37 @@ const DelStu=()=>{
 
 
   function delStu(e){
-    if(window.confirm('삭제하시겠습니까???')){
+    // if(window.confirm('삭제하시겠습니까???')){
       axios
       .delete(`/delStu/${e.stuNum}`)
       .then((res)=>{
         alert('삭제되었습니다.');
         navigate('/');
-        stu.forEach((student, i)=>{
-          if(student.stuNum==stuNum){
-            stu.splice(i, 1);
-          }
-        });
-        setStu([...stu]);
+        // State변수의 값을 변경한다 -->재랜더링 되면서 알아서 새롭게 그린다.
+
+        // stu.forEach((s, i)=>{
+        //   if(s.stuNum==stuNum){
+        //     stu.splice(i, 1);
+        //   }
+        // });
+
+        const result= stu.filter((s)=>{return s.stuNum!=e.stuNum});
+
+        setStu([...result]);
+
+
+        // stu.forEach((student, i)=>{
+        //   if(student.stuNum==stuNum){
+        //     stu.splice(i, 1);
+        //   }
+        // });
+        // setStu([...stu]);
       })
       .catch((error)=>{
         alert('삭제가 되지 안았습니다 (오류)')
         console.log(error);
       });
-    }
+    // }
   }
 
   return(

@@ -1,0 +1,50 @@
+.join-div{
+  border: 1.5px solid rgb(255, 76, 166);
+  border-radius: 15px;
+  width: 40%;
+  margin: 0 auto;
+  background-color: rgb(255, 221, 255);
+  padding: 5px;
+}
+
+.join-div> div{
+  margin-bottom: 16px;
+}
+
+.join-div p{
+  margin-bottom: 4px;
+}
+/* 아이디 입력 디자인 */
+.id-area{
+  display: flex;
+  gap: 6px;
+  /* input 태그가 원래 크기로 돌아감 
+   align-items: center; */
+}
+
+.id-area>input{
+width: 70%;
+}
+.id-area>button{
+width: 30%;
+}
+/* 성별 디자인 */
+.gender-div{
+  display: flex;
+}
+
+.gender-div>div:nth-child(1){
+  width: 15%;
+}
+.gender-div>div:nth-child(2){
+  width: 15%;
+}
+.gender-div>div:nth-child(3){
+  width: 15%;
+}
+
+.btn-div{
+  text-align: center;
+}
+
+/* body {background-image : url('isto');} */

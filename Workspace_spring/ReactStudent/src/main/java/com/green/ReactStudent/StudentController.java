@@ -39,8 +39,8 @@ public class StudentController {
     }
 
 //     수정 페이지
-    @Update("/update")
-    public void updateStudent(@PathVariable StudentVO studentVO){
+    @PutMapping("/update")
+    public void updateStudent(@RequestBody StudentVO studentVO){
         studentService.updtateStu(studentVO);
     }
 }

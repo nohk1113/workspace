@@ -8,7 +8,15 @@ import DelStu from './DelStu';
 import Score from './Score';
 import StuDetail from './StuDetail';
 import UpdateStu from './UpddateStu';
+// import * as api from './api';
+
+
 function App() {
+
+  // api.myAge;
+  // api.myName;
+  // api.myprint();
+
   const navigate=useNavigate();
 
   return (
@@ -37,7 +45,7 @@ function App() {
           {/* 학생 상세정보 */}
           <Route path='/stuDetail/:stuNum' element={<StuDetail/>}/>
           {/* 학생 정보 수정 */}
-          <Route path='/update' element={<UpdateStu/>}/>
+          <Route path='/update/:stuNum' element={<UpdateStu/>}/>
 
         </Routes>
       </div>

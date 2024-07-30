@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getReg } from "./api";
 
 const RegStu=()=>{
 
@@ -24,8 +25,7 @@ const RegStu=()=>{
       return;
     }
 
-    axios
-    .post('/regStu', stuInfo)
+    axios.post('/regStu',stuInfo)
     .then((res)=>{
       alert('학생을 등록하였습니다');
       setStuInfo(res.data);

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getStuList } from "./api";
 
 const Score=()=>{
   const navigate=useNavigate();
@@ -8,8 +9,9 @@ const Score=()=>{
   const[stu, setStu]=useState([]);
 
   useEffect(() => {
-    axios
-    .get('/list')
+
+
+    getStuList()
     .then((res)=>{
       setStu(res.data);
     })
@@ -19,17 +21,6 @@ const Score=()=>{
     });
   }, []);
 
-
-  function updateStu(){
-    axios.put('/score')
-    .then((res)=>{
-      alert('내용을 수정하였습니다');
-      navigate('/update');
-    })
-    .catch((error)=>{
-      alert('오류');
-    });
-  }
 
 
 
@@ -48,7 +39,8 @@ const Score=()=>{
           <tr key={i}>
             <td>{student.stuNum}</td>
             <td>{student.stuName}</td>
-            <td><button type="button" onClick={(e)=>{updateStu(student)}}>입력</button></td>
+            <td><button type="button"
+            onClick={(e)=>{navigate(`/update/${student.stuNum}`)}}>입력</button></td>
           </tr>
                 );
               })
