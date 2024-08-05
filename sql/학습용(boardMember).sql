@@ -168,4 +168,42 @@ SELECT * FROM TEST_ODER;
 DELETE FROM TEST_ITEM WHERE ITEM_CODE=1;
 
 DROP TABLE TEST_ODER;
-DROP TABLE TEST_ITEM;
+DROP TABLE test_item;
+
+
+-- 검색창 
+SELECT BOARD_NUM
+, TITLE
+, MEM_ID
+, CREATE_DATE
+FROM board
+WHERE ${searchType} LIKE CONCAT('%', #{serchValue}, '%');
+
+SELECT CONCAT('A', 'B', 'C', 'D');
+
+INSERT INTO BOARD (
+        TITLE
+        , CONTENT
+        , MEM_ID
+        )VALUES (
+        '테스트'
+        , '123123'
+        , 'java'
+        );
+        
+SELECT * FROM board;
+
+
+
+SELECT BOARD_NUM
+   , TITLE
+   , MEM_ID
+   , CREATE_DATE
+   FROM board 
+   ORDER BY BOARD_NUM DESC;
+   LIMIT 5 OFFSET 5;
+
+
+SELECT COUNT(BOARD_NUM)
+FROM board;
+

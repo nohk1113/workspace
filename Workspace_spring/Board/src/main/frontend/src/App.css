@@ -5,6 +5,12 @@
   /* margin-top: 20px; */
 }
 
+.page-span{
+  padding: 0px 6px;
+  cursor: pointer;
+}
+
+
 .body{
   padding: 0px;
   width: 100vw;

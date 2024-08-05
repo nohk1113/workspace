@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  background-image: url('ultra-realistic-desert-image-gobi-desert_747552-2981.jpg');
+  border: 1px solid black;
+  width: 100vW;
+  height: 100vw;
+
+  @font-face {
+    font-family: 'Ownglyph_jooreeletter-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_jooreeletter-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 }
 
 .info {
@@ -17,26 +28,26 @@ margin-bottom: 20px;
 
 .div>span{
   width: 100%;
-  border: 2px solid rgb(255, 129, 188);
+  border: 2px solid rgb(17, 8, 92);
   padding: 10px 50px;
-  background-color: rgb(255, 237, 250);
+  background-color: rgb(240, 242, 255);
 }
 
 .div>span:hover{
-  background-color: rgb(213, 228, 255);
+  background-color: rgb(204, 213, 233);
   cursor: pointer;
 }
 
 .btn{
 border-radius: 47%;
-border: 1.5px solid rgb(255, 60, 119);
-padding: 10px;
-background-color: rgb(255, 229, 244);
+border: 2px solid rgb(25, 9, 114);
+padding: 7px;
+background-color: rgb(232, 240, 255);
 }
 
 .btn:hover{
-  background-color: rgb(214, 240, 255);
-  padding: 11px;
+  background-color: rgb(214, 224, 255);
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -55,7 +66,7 @@ background-color: rgb(255, 229, 244);
 }
 
 .list-tr>td{
-  background-color: rgb(255, 240, 247);
-border-bottom: 4px double rgb(255, 47, 144);
+  background-color: rgb(236, 235, 255);
+border-bottom: 4px double rgb(50, 26, 153);
 width: 200px;
 }

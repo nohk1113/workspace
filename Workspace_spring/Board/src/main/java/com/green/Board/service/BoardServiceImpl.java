@@ -2,6 +2,7 @@ package com.green.Board.service;
 
 import com.green.Board.vo.BoardVO;
 import com.green.Board.vo.MemberVO;
+import com.green.Board.vo.PageVO;
 import com.green.Board.vo.SearchVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,8 @@ public class BoardServiceImpl implements BoardService{
 
     //게시글 목록 조회 + 검생창 기능
     @Override
-    public List<BoardVO> getBoardList(SearchVO searchVO) {
-        return sqlSession.selectList("boardMapper.getBoardList", searchVO);
+    public List<BoardVO> getBoardList(PageVO pageVO) {
+        return sqlSession.selectList("boardMapper.getBoardList", pageVO);
     }
 
 //    글 등록
@@ -52,6 +53,11 @@ public class BoardServiceImpl implements BoardService{
         sqlSession.delete("replyMapper.delBoard", boardNum);
 //        게시글 삭제
         sqlSession.delete("boardMapper.delBoard", boardNum);
+    }
+
+    @Override
+    public int getBoardCnt() {
+        return sqlSession.selectOne("boardMapper.getBoardCnt");
     }
 
 

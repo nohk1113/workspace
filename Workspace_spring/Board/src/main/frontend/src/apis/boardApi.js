@@ -4,8 +4,8 @@ import axios from "axios"
 import { useState } from "react";
 
 // 게시글 목록 조회
-export const getboardList=(data)=>{
-  const reponse= axios.post('/board/list', data);
+export const getboardList=(pageNo)=>{
+  const reponse= axios.post('/board/list',{'pageNo':pageNo});
   return reponse;
 }
 
