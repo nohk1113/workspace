@@ -4,9 +4,14 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import UserLayout from './pages/user/UserLayout';
 import AdminLayout from './pages/admin/AdminLayout';
 import Join from './pages/user/Join';
+import Login from './pages/user/Login';
+import ItemList from './pages/user/ItemList';
+import { useEffect, useState } from 'react';
 
 function App() {
   const navigate = useNavigate();
+
+
   
   return (
     <div className="container">
@@ -14,7 +19,7 @@ function App() {
       <div className='login-div'>
         <div>
           <ul className='header-menu'>
-            <li>LOGIN</li>
+            <li><span onClick={() => {navigate('/loginForm')}}>LOGIN</span></li>
             <li>
               <span onClick={() => {navigate('/join')}}>JOIN</span>
             </li>
@@ -34,7 +39,9 @@ function App() {
           {/* 일반 유저용 */}
           <Route path='/' element={ <UserLayout /> }>
             {/* 상품 목록 화면 */}
-            <Route path='' element={ <div>상품목록화면</div> }/>
+            <Route path='/itemList' element={<ItemList/>}/>
+            {/* 로그인 페이지 */}
+            <Route path='loginForm' element={<Login />}/>
 
             {/* 회원가입 페이지 */}
             <Route path='join' element={ <Join /> }/>

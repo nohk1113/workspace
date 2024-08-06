@@ -38,6 +38,19 @@
         )
     </insert>
 
+<!--    중복확인 쿼리-->
+    <select id="isEnableId" resultType="String">
+    SELECT MEM_ID
+    FROM SHOP_MEMBER
+    WHERE MEM_ID=#{memId}
+    </select>
+
+    <select id="login" resultMap="member">
+        SELECT MEM_ID, MEM_PW, MEM_ROLE
+        FROM SHOP_MEMBER
+        WHERE MEM_ID = #{memId}
+        AND MEM_PW=#{memPw}
+    </select>
 </mapper>
 
 

@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 import { joinValidate } from '../../validate/joinValidate'; 
 
 const Join = () => {
+
+// id 중복 체크 여부를 저장항 변수
+const [isCkeckId, setIsCheckId]=useState(false);
+
   const navigate = useNavigate();
 
   //daum 주소 api 팝업창을 띄우기 위한 함수 선언
@@ -95,12 +99,18 @@ const Join = () => {
       return ;
     }
 
+    // ID 중복 검사 했는지 확인
+    if(!isCkeckId){
+      alert('ID 중복 검사 후 가입하세요');
+      return;
+    }
+
     axios.post('/api_member/join', joinData)
     .then((res) => {
       //모달창 띄움
       setIsShow(true);
 
-      //로그인 페이지로 이동
+      //모달창 띄움->
     })
     .catch((error) => {
       console.log(error);
@@ -117,6 +127,27 @@ const Join = () => {
     );
   }
 
+  // 모달창을 닫으면 실행되는 함수
+  function onClickModalBtn(){
+navigate('/loginForm');
+  }
+
+// 중복확인 버튼 클릭시 실행
+function isEnableId(){
+  axios.get(`api_member/isEnableId/${joinData.memId}`)
+  .then((res)=>{
+    if(res.data){
+      alert('사용가능');
+      setIsCheckId(true);
+    }
+    else{
+      alert('중복된 아이디');
+    }
+  })
+  .catch((error)=>{
+    console.log(error);
+  });
+}
 
   return (
     <div className='join-div'>
@@ -127,9 +158,13 @@ const Join = () => {
               <td>아이디</td>
               <td>
                 <div className='inline-input'>
-                  <input className='form-control' type='text' 
-                        name='memId' onChange={(e) => {changeJoinData(e)}}/>
-                  <button className='btn btn-primary' type='button'>중복확인</button>
+                  <input className='form-control' type='text' name='memId' 
+                        onChange={(e) => {
+                          changeJoinData(e);
+                          setIsCheckId(false);
+                        }}/>
+                  <button className='btn btn-primary' 
+                  type='button' onClick={(e)=>{isEnableId()}}>중복확인</button>
                 </div>
                 <div className='feedback' ref={valid_tag[0]}></div>
               </td>
@@ -216,7 +251,7 @@ const Join = () => {
       {
         isShow 
         ? 
-        <Modal content={setModalContent} setIsShow={setIsShow}/> 
+        <Modal content={setModalContent} setIsShow={setIsShow} onClickModalBtn={onClickModalBtn}/> 
         : 
         null
       }

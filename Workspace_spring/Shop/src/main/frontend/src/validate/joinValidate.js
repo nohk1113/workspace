@@ -3,9 +3,6 @@
 //valid_tag[0] : memId
 
 import { useState } from "react";
-
-//valid_tag[1] : memName
-export const joinValidate = (newData, valid_tag, tagName) => {
 // 유효성 검사 결과를 저장할 변수
 let resultArr=[
   false, // 비번
@@ -17,8 +14,25 @@ let resultArr=[
 let result_pw1=false;
 let result_pw2=false;
 
+//valid_tag[1] : memName
+export const joinValidate = (newData, valid_tag, tagName) => {
+
+
   switch(tagName){
     case 'memId':
+      //id가 영문만 포함 + 4~12자리인지 검사하는 정규식
+      const regex_memId = /^[a-z|A-Z]{4,12}$/;
+
+      //id 유효성 검사
+      //test() : 매개변수로 들어온 데이터가 조건에 부합하면 리턴 true
+      if(regex_memId.test(newData.memId)){
+        sendFeedbackMsg(valid_tag[0], '사용 가능한 아이디입니다.', 'good');
+        resultArr[0] = true;
+      }
+      else{
+        sendFeedbackMsg(valid_tag[0], '불가능한 아이디입니다.', 'error');
+        resultArr[0] = false;
+      }
       break;
     case 'memPw':
     case'confirmPw':
@@ -78,27 +92,15 @@ let result_pw2=false;
   // 배열에 매개변수로 전달된 데이터가 존재하면 리턴 true;   (밑에 있는 코드와 같은 역할을 한다)
   // return ! resultArr.includes(false);
 
+  console.log(resultArr);
+
   for(const e of resultArr){
     if(!e){
       return false;
     }
   }
 
-
-
-
-  //id가 영문만 포함 + 4~12자리인지 검사하는 정규식
-  const regex_memId = /^[a-z|A-Z]{4,12}$/;
-
-  //id 유효성 검사
-  //test() : 매개변수로 들어온 데이터가 조건에 부합하면 리턴 true
-  if(regex_memId.test(newData.memId)){
-    sendFeedbackMsg(valid_tag[0], '사용 가능한 아이디입니다.', 'good');
-  }
-  else{
-    sendFeedbackMsg(valid_tag[0], '불가능한 아이디입니다.', 'error');
-  }
-
+  return true;
   
 }
 
