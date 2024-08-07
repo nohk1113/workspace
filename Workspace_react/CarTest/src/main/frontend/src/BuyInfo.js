@@ -37,7 +37,7 @@ const BuyInfo = () => {
           </tr>
         </thead>
       </table>
-      <button type='button' className='btn'></button>
+      <button type='button' className='btn'>등록</button>
     </div>
   )
 }

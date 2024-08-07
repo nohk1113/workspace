@@ -4,6 +4,7 @@
   border: 1px solid black;
   width: 100vW;
   height: 100vw;
+  background-size: cover;
 
   @font-face {
     font-family: 'Ownglyph_jooreeletter-Rg';
@@ -30,11 +31,11 @@ margin-bottom: 20px;
   width: 100%;
   border: 2px solid rgb(17, 8, 92);
   padding: 10px 50px;
-  background-color: rgb(240, 242, 255);
+  background-color: rgb(245, 246, 255);
 }
 
 .div>span:hover{
-  background-color: rgb(204, 213, 233);
+  background-color: rgb(228, 237, 255);
   cursor: pointer;
 }
 
@@ -42,7 +43,7 @@ margin-bottom: 20px;
 border-radius: 47%;
 border: 2px solid rgb(25, 9, 114);
 padding: 7px;
-background-color: rgb(232, 240, 255);
+background-color: rgb(239, 244, 255);
 }
 
 .btn:hover{

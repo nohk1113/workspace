@@ -73,6 +73,20 @@
   cursor: pointer;
 }
 
+.login-info{
+  width: 20%;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.login-info > span{
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
+}
+
 /* ----------------------- */
 /* ------ 공통 디자인 ----- */
 /* ----------------------- */
@@ -252,8 +266,31 @@ input, select, textarea{
 }
 
 
+/* 상품 등록 페이지 */
+.reg-item-div{
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(230, 230, 230, 0.1);
+  box-shadow: 3px 3px 6px #dddddd;
+}
 
+.reg-item-div > .input-element{
+  margin-bottom: 16px;
+}
 
+.reg-item-div > .input-element > div:nth-child(1){
+  margin-bottom: 10px;
+}
+
+.reg-item-div textarea.form-control{
+  resize: none;
+}
+
+.reg-item-div .btn-div{
+  text-align: right;
+}
 
 
 

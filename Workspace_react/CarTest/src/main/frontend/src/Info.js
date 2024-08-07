@@ -12,6 +12,14 @@ const [carInfo, setCarInfo]=useState({
   carPrice:''
 });
 
+function changeCar(e){
+  setCarInfo({
+    ...carInfo,
+    [e.target.name]: e.target.value
+  });
+}
+
+
 
 
 // 차량 목록 조회
@@ -43,11 +51,11 @@ function carInfoUpdate(){
       <div>-차량 등록</div> <br></br>
       <tr className='info'>
         <td>제조사</td>
-        <td><input type='text'/></td>
+        <td><input type='text' name='band' onChange={(e)=>{changeCar(e)}}/></td>
         <td>모델명</td>
-        <td><input type='text'/></td>
+        <td><input type='text' name='carName' onChange={(e)=>{changeCar(e)}}/></td>
         <td>차량 가격</td>
-        <td><input type='text'/></td>
+        <td><input type='text' name='carPrice' onChange={(e)=>{changeCar(e)}}/></td>
       </tr>
       <button className='btn' type='button' onClick={(e)=>{carInfoUpdate()}}>등록</button>
       <div className='list-list'>-차량 목록</div>
