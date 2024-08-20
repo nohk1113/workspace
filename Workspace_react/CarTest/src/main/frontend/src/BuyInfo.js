@@ -2,14 +2,14 @@ import React from 'react'
 
 const BuyInfo = () => {
   return (
-    <div>
-      <table>
+    <div className='buy-top'>
+      <table className='buy-table'>
         <thead>
           <tr>
             <td>구매자 명</td>
-            <td><input type='text'/></td>
+            <td colSpan={3} ><input type='text' className='buy-input'/></td>
           </tr>
-          <tr>
+          <tr  className='buy-tr'>
             <td>색상</td>
             <td>
               <select>
@@ -33,7 +33,7 @@ const BuyInfo = () => {
           </tr>
           <tr>
             <td>연락처</td>
-            <td><input type='text'/></td>
+            <td colSpan={3} ><input type='text' className='buy-input'/></td>
           </tr>
         </thead>
       </table>

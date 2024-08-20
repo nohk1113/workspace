@@ -38,6 +38,7 @@ function carInfoUpdate(){
   .then((res)=>{
     alert('등록 되었습니다')
     setCarInfo(res.data);
+    
   })
   .catch((error)=>{
     alert('등록 오류');

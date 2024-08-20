@@ -1,8 +1,6 @@
-package com.green.Shop.item.VO;
+package com.green.Shop.item.vo;
 
 import lombok.Data;
-
-import javax.swing.*;
 
 @Data
 public class CategoryVO {

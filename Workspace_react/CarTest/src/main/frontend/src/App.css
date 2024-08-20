@@ -31,7 +31,7 @@ margin-bottom: 20px;
   width: 100%;
   border: 2px solid rgb(17, 8, 92);
   padding: 10px 50px;
-  background-color: rgb(245, 246, 255);
+  background-color: rgba(245, 246, 255, 0.6);
 }
 
 .div>span:hover{
@@ -40,10 +40,10 @@ margin-bottom: 20px;
 }
 
 .btn{
-border-radius: 47%;
+border-radius: 10%;
 border: 2px solid rgb(25, 9, 114);
 padding: 7px;
-background-color: rgb(239, 244, 255);
+background-color: rgba(239, 244, 255, 0.8);
 }
 
 .btn:hover{
@@ -67,7 +67,25 @@ background-color: rgb(239, 244, 255);
 }
 
 .list-tr>td{
-  background-color: rgb(236, 235, 255);
+  background-color: rgba(236, 235, 255, 0.8);
 border-bottom: 4px double rgb(50, 26, 153);
 width: 200px;
+}
+
+.buy-top{
+  margin: auto;
+  text-align: center;
+
+}
+.buy-table{
+  margin: auto;
+}
+
+.buy-table td:nth-child(2){
+width: 40%;
+text-align: left;
+}
+
+.buy-input{
+  width: 100%;
 }

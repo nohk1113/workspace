@@ -19,6 +19,7 @@ public class CarController {
     public List<CarInfoVO> getCarList() {
         return carService.getCarList();
     }
+
 //        자동차 정보 등록
     @PostMapping("/info")
     public void insertCar(@RequestBody CarInfoVO carInfoVO){
