@@ -52,9 +52,17 @@ function carInfoUpdate(){
       <div>-차량 등록</div> <br></br>
       <tr className='info'>
         <td>제조사</td>
-        <td><input type='text' name='band' onChange={(e)=>{changeCar(e)}}/></td>
+        <td>
+        <select onChange={(e)=>{changeCar(e)}}>
+                <option>쌍용</option>
+                <option>현대</option>
+                <option>기아</option>
+        </select>
+        </td>
         <td>모델명</td>
-        <td><input type='text' name='carName' onChange={(e)=>{changeCar(e)}}/></td>
+        <td>
+          <input type='text' name='carName' onChange={(e)=>{changeCar(e)}}/>
+        </td>
         <td>차량 가격</td>
         <td><input type='text' name='carPrice' onChange={(e)=>{changeCar(e)}}/></td>
       </tr>
