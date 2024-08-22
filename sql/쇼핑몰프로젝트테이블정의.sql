@@ -166,4 +166,25 @@ AND ITEM.ITEM_CODE=1;
  SELECT * FROM shop_item;
  
  
+ -- 내장바구니에 현재 선택한 상품이 있는지 확인하는 쿼리
+ SELECT CART_CODE
+ FROM SHOP_CART
+ WHERE ITEM_CODE=3
+ AND MEM_ID='JAVA';
+ 
+ 
+ 
+ -- 장바구니 상품의 수량 및 날짜 변경
+ UPDATE shop_cart
+ SET
+ CART_CNT=CART_CNT+3,
+ CART_DATE=NOW()
+ WHERE ITEM_CODE=
+ AND MEM_ID=;
+ 
+ 
+ DELETE FROM shop_cart;
+ 
+ DELETE FROM shop_cart;
+ DELETE FROM shop_item;
  

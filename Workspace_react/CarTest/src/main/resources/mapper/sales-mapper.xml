@@ -3,14 +3,40 @@
 
 <!-- 해당 파일에 모든 쿼리문을 작성 -->
 <mapper namespace="salesMapper">
-<!--    <resultMap id="sales" type="com.green.CarTest.vo.SalesVO">-->
-<!--        <id column="SALES_PK" property="salesPk"/>-->
-<!--        <result column="BUYER_NAME" property="buyerName"/>-->
-<!--        <result column="BUYER_TEL" property="buyerTel"/>-->
-<!--        <result column="COLOR" property="color"/>-->
-<!--        <result column="BUY_DATE" property="buyDate"/>-->
-<!--    </resultMap>-->
-	
+    <resultMap id="sales" type="com.green.CarTest.vo.SalesVO">
+        <id column="SALES_PK" property="salesPk"/>
+        <result column="BUYER_NAME" property="buyerName"/>
+        <result column="BUYER_TEL" property="buyerTel"/>
+        <result column="COLOR" property="color"/>
+        <result column="BUY_DATE" property="buyDate"/>
+        <collection property="carInfoVO" resultMap="carMapper.car"/>
+    </resultMap>
+
+    <!--    구매 고객 목록-->
+    <insert id="insertBuyer">
+        INSERT INTO CAR_INFO (
+        CAR_PK
+        , BUYER_NAME
+        , CAR_BRAND
+        , COLOR
+        ) VALUES (
+        #{carPk}
+        ,#{buyerName}
+        ,#{band}
+        ,#{color}
+        );
+    </insert>
+
+    <!--   구매자 목록 조회-->
+<!--    <select id="getBuy" resultMap="car">-->
+<!--        SELECT SALES_PK,-->
+<!--        , CAR_PK-->
+<!--        , CAR_NAME-->
+<!--        , CAR_BRAND-->
+<!--        , COLOR-->
+<!--        WHERE CAR_PK=SALES_PK-->
+<!--    </select>-->
+
 </mapper>
 
 

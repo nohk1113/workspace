@@ -8,4 +8,5 @@ public class CarInfoVO {
     private String carName;
     private int carPrice;
     private String band;
+    private String color;
 }

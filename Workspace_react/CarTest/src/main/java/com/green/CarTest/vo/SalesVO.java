@@ -2,6 +2,8 @@ package com.green.CarTest.vo;
 
 import lombok.Data;
 
+import java.util.List;
+
 
 @Data
 public class SalesVO {
@@ -10,4 +12,5 @@ public class SalesVO {
     private String buyerTel;
     private String color;
     private String buyDate;
+    private List<CarInfoVO> carInfoVO;
 }

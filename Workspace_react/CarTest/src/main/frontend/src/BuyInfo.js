@@ -1,6 +1,47 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const BuyInfo = () => {
+  const navigate=useNavigate();
+
+  const [buy, setBuy]=useState({
+    carPk:0,
+    carName:'',
+    carBrand:'',
+  });
+
+
+  // 자동차 셀렉트 옵션 변수
+  const [carList, setCarList]=useState([]);
+
+  useEffect(()=>{
+    axios.get('/car/carList')
+    .then((res)=>{
+      setCarList(res.data);
+    })
+    .catch((error)=>{
+      console.log(error)
+    });
+  }, []);
+
+  function update(){
+    axios.post('/car/buyer', buy)
+    .then((res)=>{
+      navigate('/car/buyerList');
+    })
+    .catch((error)=>{
+      alert('등록 오류');
+    });
+  }
+
+  function changeBuy(e){
+    setBuy({
+      ...buy,
+      [e.target.name]:e.target.value
+    });
+  }
+
   return (
     <div className='buy-top'>
       <table className='buy-table'>
@@ -12,32 +53,35 @@ const BuyInfo = () => {
           <tr  className='buy-tr'>
             <td>색상</td>
             <td>
-              <select>
-                <option>흰색</option>
-                <option>노란색</option>
-                <option>검은색</option>
-                <option>콜드블루</option>
+              <select onChange={(e)=>{changeBuy(e)}}>
+                <option>블랙</option>
+                <option>실버</option>
+                <option>화이트</option>
+                <option>레드</option>
               </select>
             </td>
             <td>모델</td>
             <td>
-              <select>
-                <option>아반떼</option>
-                <option>쏘나타</option>
-                <option>k3</option>
-                <option>Qm6</option>
-                <option>더 비틀</option>
-                <option>e 클래스</option>
+              <select onChange={(e)=>{changeBuy(e)}}>
+                {
+                  carList.map((car, i)=>{
+                    return(
+                      <option key={i} value={car.carPk}>
+                        {car.carName}
+                        </option>
+                    );
+                  })
+                }
               </select>
             </td>
           </tr>
           <tr>
             <td>연락처</td>
-            <td colSpan={3} ><input type='text' className='buy-input'/></td>
+            <td colSpan={3} ><input type='text' className='buy-input' onChange={(e)=>{changeBuy(e)}}></input></td>
           </tr>
         </thead>
       </table>
-      <button type='button' className='btn'>등록</button>
+      <button type='button' className='btn' onClick={(e)=>{update()}}>등록</button>
     </div>
   )
 }

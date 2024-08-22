@@ -10,6 +10,15 @@
         <result column="CAR_BRAND" property="band"/>
     </resultMap>
 
+<!--    <resultMap id="car" type="com.green.CarTest.vo.SalesVO">-->
+<!--        <id column="SALES_PK" property="salesPk"/>-->
+<!--        <result column="BUYER_NAME" property="buyerName"/>-->
+<!--        <result column="BUYER_TEL" property="buyerTel"/>-->
+<!--        <result column="COLOR" property="color"/>-->
+<!--        <result column="BUY_DATE" property="buyDate"/>-->
+<!--        <collection property="sales" resultMap="sales"/>-->
+<!--    </resultMap>-->
+
 <!--    자동차 목록 조회-->
     <select id="getCarList" resultMap="car">
         SELECT CAR_PK
@@ -33,7 +42,15 @@
         ,#{band}
         );
     </insert>
-	
+
+<!--    자동차 모델 조회-->
+    <select id="getCar" resultMap="car">
+        SELECT CAR_PK,
+        CAR_NAME
+        FROM CAR_INFO
+        ORDER BY CAR_PK ASC
+    </select>
+
 </mapper>
 
 

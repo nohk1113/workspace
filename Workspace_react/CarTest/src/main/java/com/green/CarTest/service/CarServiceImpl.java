@@ -1,6 +1,7 @@
 package com.green.CarTest.service;
 
 import com.green.CarTest.vo.CarInfoVO;
+import com.green.CarTest.vo.SalesVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,13 +16,29 @@ public class CarServiceImpl implements CarService{
 
 //자동차 목록 조회
     @Override
-    public List<CarInfoVO> getCarList() {
-        return sqlSession.selectList("carMapper.getCarList");
+    public List<CarInfoVO> getCarList(CarInfoVO carInfoVO) {
+        return sqlSession.selectList("carMapper.getCarList", carInfoVO);
     }
 
 //    자동차 정보 등록
     @Override
     public void insertCar(CarInfoVO carInfoVO) {
         sqlSession.insert("carMapper.insertCar", carInfoVO);
+    }
+
+    //    자동차 구매 고객 등록
+    @Override
+    public void insertBuyer(CarInfoVO carInfoVO) {
+        sqlSession.insert("carMapper.insertBuyer", carInfoVO);
+    }
+
+    @Override
+    public List<SalesVO> getBuy() {
+        return sqlSession.selectList("carMapper.getBuy");
+    }
+
+    @Override
+    public List<CarInfoVO> getCar() {
+        return sqlSession.selectList("carMapper.getCarList");
     }
 }
