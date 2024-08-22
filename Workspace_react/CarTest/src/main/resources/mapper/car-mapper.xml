@@ -7,7 +7,7 @@
         <id column="CAR_PK" property="carPk"/>
         <result column="CAR_NAME" property="carName"/>
         <result column="CAR_PRICE" property="carPrice"/>
-        <result column="CAR_BRAND" property="band"/>
+        <result column="CAR_BRAND" property="brand"/>
     </resultMap>
 
 <!--    <resultMap id="car" type="com.green.CarTest.vo.SalesVO">-->
@@ -39,7 +39,7 @@
         #{carPk}
         ,#{carName}
         ,#{carPrice}
-        ,#{band}
+        ,#{brand}
         );
     </insert>
 

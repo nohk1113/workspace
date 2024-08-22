@@ -14,27 +14,27 @@
 
     <!--    구매 고객 목록-->
     <insert id="insertBuyer">
-        INSERT INTO CAR_INFO (
+        INSERT INTO SALES_INFO (
         CAR_PK
         , BUYER_NAME
-        , CAR_BRAND
         , COLOR
+        , BUYER_TEL
         ) VALUES (
         #{carPk}
         ,#{buyerName}
-        ,#{band}
         ,#{color}
+        , #{buyerTel}
         );
     </insert>
 
-    <!--   구매자 목록 조회-->
-<!--    <select id="getBuy" resultMap="car">-->
-<!--        SELECT SALES_PK,-->
+<!--       구매자 목록 조회-->
+<!--    <select id="getBuy" resultMap="sales">-->
+<!--        SELECT SALES_PK-->
 <!--        , CAR_PK-->
 <!--        , CAR_NAME-->
 <!--        , CAR_BRAND-->
 <!--        , COLOR-->
-<!--        WHERE CAR_PK=SALES_PK-->
+<!--        WHERE CAR_PK = SALES_PK-->
 <!--    </select>-->
 
 </mapper>

@@ -101,12 +101,12 @@ const Login = ({setLoginInfo, loginInfo}) => {
       }
     }
   }
- 
+
   return (
     <div className='login-page-div'>
       <div>
         <input type='text' className='form-control' placeholder='Input your ID'
-             name='memId' onChange={(e) => {changeLoginData(e)}}/>
+            name='memId' onChange={(e) => {changeLoginData(e)}}/>
       </div>
       <div>
       <input type='password'className='form-control' placeholder='Input your Password'

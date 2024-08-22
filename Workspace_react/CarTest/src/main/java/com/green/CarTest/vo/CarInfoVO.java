@@ -7,6 +7,6 @@ public class CarInfoVO {
     private  int carPk;
     private String carName;
     private int carPrice;
-    private String band;
+    private String brand;
     private String color;
 }

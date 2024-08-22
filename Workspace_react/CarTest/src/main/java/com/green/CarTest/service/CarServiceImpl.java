@@ -28,8 +28,8 @@ public class CarServiceImpl implements CarService{
 
     //    자동차 구매 고객 등록
     @Override
-    public void insertBuyer(CarInfoVO carInfoVO) {
-        sqlSession.insert("carMapper.insertBuyer", carInfoVO);
+    public void insertBuyer(SalesVO salesVO) {
+        sqlSession.insert("salesMapper.insertBuyer", salesVO);
     }
 
     @Override
@@ -39,6 +39,6 @@ public class CarServiceImpl implements CarService{
 
     @Override
     public List<CarInfoVO> getCar() {
-        return sqlSession.selectList("carMapper.getCarList");
+        return sqlSession.selectList("carMapper.getCar");
     }
 }

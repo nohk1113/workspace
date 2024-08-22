@@ -12,5 +12,6 @@ public class SalesVO {
     private String buyerTel;
     private String color;
     private String buyDate;
+    private int carPk;
     private List<CarInfoVO> carInfoVO;
 }

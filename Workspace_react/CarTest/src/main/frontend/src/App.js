@@ -13,12 +13,16 @@ function App() {
   return (
     <div className="App">
       <div className='head'>
-        <tr>
-          <td  className='div'> <span onClick={(e)=>{navigate('/')}}>홈</span></td>
-          <td className='div' ><span onClick={(e)=>{navigate('/info')}}>차량관리</span></td>
-          <td className='div'><span onClick={(e)=>{navigate('/buyInfo')}}>판매자 정보 등록</span></td>
-          <td className='div'><span onClick={(e)=>{navigate('/buyerList')}}>판매자 목록</span></td>
-        </tr>
+        <table>
+          <tbody>
+            <tr>
+              <td  className='div'> <span onClick={(e)=>{navigate('/')}}>홈</span></td>
+              <td className='div' ><span onClick={(e)=>{navigate('/info')}}>차량관리</span></td>
+              <td className='div'><span onClick={(e)=>{navigate('/buyInfo')}}>판매자 정보 등록</span></td>
+              <td className='div'><span onClick={(e)=>{navigate('/buyerList')}}>판매자 목록</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div>
         <Routes>

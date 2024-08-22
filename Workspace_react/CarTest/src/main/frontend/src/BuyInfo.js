@@ -7,8 +7,9 @@ const BuyInfo = () => {
 
   const [buy, setBuy]=useState({
     carPk:0,
-    carName:'',
-    carBrand:'',
+    buyerName:'',
+    buyerTel:'',
+    color:''
   });
 
 
@@ -26,9 +27,9 @@ const BuyInfo = () => {
   }, []);
 
   function update(){
-    axios.post('/car/buyer', buy)
+    axios.post('/car/buy', buy)
     .then((res)=>{
-      navigate('/car/buyerList');
+      navigate('/buyerList');
     })
     .catch((error)=>{
       alert('등록 오류');
@@ -48,12 +49,12 @@ const BuyInfo = () => {
         <thead>
           <tr>
             <td>구매자 명</td>
-            <td colSpan={3} ><input type='text' className='buy-input'/></td>
+            <td colSpan={3} ><input type='text' name='buyerName' className='buy-input' onChange={(e) => {changeBuy(e)}}/></td>
           </tr>
-          <tr  className='buy-tr'>
+          <tr className='buy-tr'>
             <td>색상</td>
             <td>
-              <select onChange={(e)=>{changeBuy(e)}}>
+              <select name='color' onChange={(e)=>{changeBuy(e)}}>
                 <option>블랙</option>
                 <option>실버</option>
                 <option>화이트</option>
@@ -62,7 +63,7 @@ const BuyInfo = () => {
             </td>
             <td>모델</td>
             <td>
-              <select onChange={(e)=>{changeBuy(e)}}>
+              <select name='carPk' onChange={(e)=>{changeBuy(e)}}>
                 {
                   carList.map((car, i)=>{
                     return(
@@ -77,7 +78,7 @@ const BuyInfo = () => {
           </tr>
           <tr>
             <td>연락처</td>
-            <td colSpan={3} ><input type='text' className='buy-input' onChange={(e)=>{changeBuy(e)}}></input></td>
+            <td colSpan={3} ><input type='text' name='buyerTel' className='buy-input' onChange={(e)=>{changeBuy(e)}}></input></td>
           </tr>
         </thead>
       </table>

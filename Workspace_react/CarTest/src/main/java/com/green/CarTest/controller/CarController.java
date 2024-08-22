@@ -29,17 +29,17 @@ public class CarController {
 
     //    자동차 구매 고객 등록
     @PostMapping("/buy")
-    public void insertBuyer(@RequestBody CarInfoVO carInfoVO){
-        carService.insertBuyer(carInfoVO);
+    public void insertBuyer(@RequestBody SalesVO salesVO){
+        carService.insertBuyer(salesVO);
     }
 
-//    구매자 차량 목록 조회
-    @PostMapping("/buyer")
+//    판매자 목록 조회
+    @GetMapping("/buyer")
     public List<SalesVO> getBuy(){
         return carService.getBuy();
     }
 
-//    자동차 번호와 이름만 조회
+//    구매자 차량 목록 조회
     @GetMapping("/carList")
     public List<CarInfoVO> getCar(){
         return carService.getCar();

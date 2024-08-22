@@ -1,4 +1,4 @@
-
+SELECT * FROM sales_info;
 
 -- 자동차 쿼리 작성
 CREATE TABLE CAR_INFO (
