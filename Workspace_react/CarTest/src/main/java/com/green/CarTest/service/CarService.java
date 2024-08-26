@@ -17,7 +17,7 @@ public interface CarService {
     void insertBuyer(SalesVO salesVO);
 
 //    자동차 구매 고객 목록 조회
-    List<SalesVO> getBuy();
+    List<SalesVO> getBuy(SalesVO salesVO);
 
 //    차 목록 조회(이름과 번호만)
     List<CarInfoVO> getCar();

@@ -89,3 +89,14 @@ text-align: left;
 .buy-input{
   width: 100%;
 }
+
+
+/* 마지막 페이지 */
+.last-table{
+  border: 1px solid black;
+}
+
+.last-table td{
+  border: 1px solid black;
+}
+

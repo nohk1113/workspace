@@ -40,6 +40,7 @@ if(e.target.name=='memId'){
     }
 
     // id 값을 가지고 자바로 가서 중복확인 쿼리를 실행
+    // axios.get(`/member/checkId/${data}`)
     memberApi.checkId(joinData.memId)
     .then((res)=>{
       const result= res.data;

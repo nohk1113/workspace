@@ -28,14 +28,18 @@
     </insert>
 
 <!--       구매자 목록 조회-->
-<!--    <select id="getBuy" resultMap="sales">-->
-<!--        SELECT SALES_PK-->
-<!--        , CAR_PK-->
-<!--        , CAR_NAME-->
-<!--        , CAR_BRAND-->
-<!--        , COLOR-->
-<!--        WHERE CAR_PK = SALES_PK-->
-<!--    </select>-->
+    <select id="getBuy" resultMap="sales">
+        SELECT SALES_PK
+        , BUYER_NAME
+        , CAR_NAME
+        , BUYER_TEL
+        , COLOR
+        , BUY_DATE
+        ,CAR_PRICE
+        FROM SALES_INFO SALES, CAR_INFO CAR
+        WHERE SALES.CAR_PK=CAR.CAR_PK
+        ORDER BY BUY_DATE DESC
+    </select>
 
 </mapper>
 

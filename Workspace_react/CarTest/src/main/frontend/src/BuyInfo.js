@@ -6,10 +6,10 @@ const BuyInfo = () => {
   const navigate=useNavigate();
 
   const [buy, setBuy]=useState({
-    carPk:0,
+    carPk:1,
     buyerName:'',
     buyerTel:'',
-    color:''
+    color:'블랙'
   });
 
 

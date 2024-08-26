@@ -35,8 +35,8 @@ public class CarController {
 
 //    판매자 목록 조회
     @GetMapping("/buyer")
-    public List<SalesVO> getBuy(){
-        return carService.getBuy();
+    public List<SalesVO> getBuy(SalesVO salesVO){
+        return carService.getBuy(salesVO);
     }
 
 //    구매자 차량 목록 조회

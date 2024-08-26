@@ -32,9 +32,10 @@ public class CarServiceImpl implements CarService{
         sqlSession.insert("salesMapper.insertBuyer", salesVO);
     }
 
+//    차량구매한 사람 목록 조회
     @Override
-    public List<SalesVO> getBuy() {
-        return sqlSession.selectList("carMapper.getBuy");
+    public List<SalesVO> getBuy(SalesVO salesVO) {
+        return sqlSession.selectList("salesMapper.getBuy", salesVO);
     }
 
     @Override
