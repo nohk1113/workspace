@@ -40,10 +40,10 @@ margin-bottom: 20px;
 }
 
 .btn{
-border-radius: 10%;
-border: 2px solid rgb(25, 9, 114);
+  width: 60px;
+border: 1px solid rgb(25, 9, 114);
 padding: 7px;
-background-color: rgba(239, 244, 255, 0.8);
+background-color: rgba(242, 246, 255, 0.8);
 }
 
 .btn:hover{
@@ -76,9 +76,14 @@ width: 200px;
   margin: auto;
   text-align: center;
 
+
 }
 .buy-table{
   margin: auto;
+  border: 1px solid rgb(48, 53, 112);
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40%;
+  height: 200px;
 }
 
 .buy-table td:nth-child(2){
@@ -87,13 +92,15 @@ text-align: left;
 }
 
 .buy-input{
-  width: 100%;
+  width: 90%;
 }
 
 
 /* 마지막 페이지 */
 .last-table{
   border: 1px solid black;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 .last-table td{

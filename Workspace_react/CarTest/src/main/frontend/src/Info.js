@@ -53,10 +53,10 @@ function carInfoUpdate(){
       <tr className='info'>
         <td>제조사</td>
         <td>
-        <select onChange={(e)=>{changeCar(e)}}>
-                <option>쌍용</option>
-                <option>현대</option>
-                <option>기아</option>
+        <select name='brand' onChange={(e)=>{changeCar(e)}}>
+                <option name='쌍용'>쌍용</option>
+                <option name='현대'>현대</option>
+                <option name='기아'>기아</option>
         </select>
         </td>
         <td>모델명</td>
